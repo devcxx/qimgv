@@ -203,7 +203,7 @@ void Core::initActions() {
     connect(actionManager, &ActionManager::toggleFullscreenInfoBar, this, &Core::toggleFullscreenInfoBar);
     connect(actionManager, &ActionManager::pasteFile, this, &Core::openFromClipboard);
 }
-
+#define TRANSLATIONS_PATH ":/res/translations/"
 void Core::loadTranslation() {
     if(!translator)
         translator = new QTranslator;
@@ -258,7 +258,7 @@ void Core::onUpdate() {
 
 void Core::onFirstRun() {
     //mw->showSomeSortOfWelcomeScreen();
-    mw->showMessage(tr("Welcome to ") + qApp->applicationName() + tr(" version ") + appVersion.toString() + "!", 4000);
+    mw->showMessage(tr("Welcome to ") + tr("qlimgv") + tr(" version ") + appVersion.toString() + "!", 4000);
     settings->setFirstRun(false);
     settings->setLastVersion(appVersion);
 }

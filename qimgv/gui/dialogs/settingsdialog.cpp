@@ -1,4 +1,4 @@
-#include "settingsdialog.h"
+﻿#include "settingsdialog.h"
 #include "ui_settingsdialog.h"
 
 SettingsDialog::SettingsDialog(QWidget *parent) :
@@ -6,7 +6,7 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
     ui(new Ui::SettingsDialog)
 {
     ui->setupUi(this);
-    this->setWindowTitle(tr("Preferences — ") + qApp->applicationName());
+    this->setWindowTitle(tr("Preferences — ") + tr("qlimgv"));
 
     ui->shortcutsTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);   
     ui->aboutAppTextBrowser->viewport()->setAutoFillBackground(false);
@@ -104,7 +104,7 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
 
     // readable language names
     langs.insert("en_US", "English");
-    langs.insert("zh_CN", "简体中文");
+    langs.insert("zh_CN", u8"简体中文");
     // fill langs combobox, sorted by locale
     ui->langComboBox->addItems(langs.values());
     // insert system language entry manually at the beginning

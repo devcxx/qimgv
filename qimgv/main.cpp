@@ -60,12 +60,12 @@ int main(int argc, char *argv[]) {
     a.setStyle(new ProxyStyle);
 #endif
 
-    QCoreApplication::setOrganizationName("qimgv");
+    QCoreApplication::setOrganizationName("qlimgv");
     QCoreApplication::setOrganizationDomain("github.com/easymodo/qimgv");
-    QCoreApplication::setApplicationName("qimgv");
+    QCoreApplication::setApplicationName("qlimgv");
     QCoreApplication::setApplicationVersion(appVersion.toString());
     QApplication::setEffectEnabled(Qt::UI_AnimateCombo, false);
-    QGuiApplication::setDesktopFileName(QCoreApplication::applicationName() + ".desktop");
+    QGuiApplication::setDesktopFileName(QCoreApplication::translate("main", "qlimgv") + ".desktop");
 
     // needed for mpv
 #ifndef _MSC_VER
@@ -104,7 +104,7 @@ int main(int argc, char *argv[]) {
 
 // parse args test -------------------------------------------------------------
     QCommandLineParser parser;
-    QString appDescription = qApp->applicationName() + " - Fast and configurable image viewer.";
+    QString appDescription = QCoreApplication::translate("main", "qlimgv") + " - Fast and configurable image viewer.";
     appDescription.append("\nVersion: " + qApp->applicationVersion());
     appDescription.append("\nLicense: GNU GPLv3");
     parser.setApplicationDescription(appDescription);

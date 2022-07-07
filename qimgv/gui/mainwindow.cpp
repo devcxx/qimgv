@@ -29,7 +29,7 @@ MW::MW(QWidget *parent)
 
     this->setLayout(&layout);
 
-    setWindowTitle(QCoreApplication::applicationName() + " " +
+    setWindowTitle(tr("qlimgv") + " " +
                    QCoreApplication::applicationVersion());
 
     this->setMouseTracking(true);
@@ -772,7 +772,7 @@ void MW::onInfoUpdated() {
         infoBarFullscreen->setInfo("", tr("No file opened."), "");
         infoBarWindowed->setInfo("", tr("No file opened."), "");
     } else if(info.fileName.isEmpty()) {
-        windowTitle = qApp->applicationName();
+        windowTitle = tr("qlimgv");
         infoBarFullscreen->setInfo("", tr("No file opened."), "");
         infoBarWindowed->setInfo("", tr("No file opened."), "");
     } else {

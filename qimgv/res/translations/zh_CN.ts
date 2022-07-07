@@ -133,6 +133,11 @@
         <translation> 版本 </translation>
     </message>
     <message>
+        <location filename="../../core.cpp" line="261"/>
+        <source>qlimgv</source>
+        <translation type="unfinished">启临图片查看器</translation>
+    </message>
+    <message>
         <location filename="../../core.cpp" line="268"/>
         <source>Shuffle mode: OFF</source>
         <translation>随机模式: 关闭</translation>
@@ -612,6 +617,12 @@
 </context>
 <context>
     <name>MW</name>
+    <message>
+        <location filename="../../gui/mainwindow.cpp" line="32"/>
+        <location filename="../../gui/mainwindow.cpp" line="775"/>
+        <source>qlimgv</source>
+        <translation type="unfinished">启临图片查看器</translation>
+    </message>
     <message>
         <location filename="../../gui/mainwindow.cpp" line="536"/>
         <source>Save File as...</source>
@@ -2144,6 +2155,11 @@ p, li { white-space: pre-wrap; }
         <translation>首选项 — </translation>
     </message>
     <message>
+        <location filename="../../gui/dialogs/settingsdialog.cpp" line="9"/>
+        <source>qlimgv</source>
+        <translation type="unfinished">启临图片查看器</translation>
+    </message>
+    <message>
         <location filename="../../gui/dialogs/settingsdialog.cpp" line="54"/>
         <source>Accent color</source>
         <translation>重点色</translation>
@@ -2214,6 +2230,12 @@ p, li { white-space: pre-wrap; }
 </context>
 <context>
     <name>main</name>
+    <message>
+        <location filename="../../main.cpp" line="68"/>
+        <location filename="../../main.cpp" line="107"/>
+        <source>qlimgv</source>
+        <translation type="unfinished">启临图片查看器</translation>
+    </message>
     <message>
         <location filename="../../main.cpp" line="113"/>
         <source>File or directory path.</source>
