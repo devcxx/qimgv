@@ -101,9 +101,13 @@ void Settings::loadStylesheet() {
             sys_window_tinted.setHsv(sys_window.hue(), sys_window.saturation(), sys_window.value() - 16);
         }
 
+        // fonts
+        int smallFont = (int)(QApplication::font().pointSize() * 0.85f);
+
         // -------------- write variables into stylesheet ---------------
         //styleSheet.replace("%icontheme%",            settings->theme().iconTheme);
         styleSheet.replace("%icontheme%",            "light");
+        styleSheet.replace("%font_small%",           QString::number(smallFont)+"pt");
         styleSheet.replace("%button%",               colors.button.name());
         styleSheet.replace("%button_hover%",         colors.button_hover.name());
         styleSheet.replace("%button_pressed%",       colors.button_pressed.name());
@@ -176,6 +180,7 @@ void Settings::loadTheme() {
         base.scrollbar             = QColor(themeConf->value("scrollbar",             "#aaaaaa").toString());
         base.overlay_text          = QColor(themeConf->value("overlay_text",          "#d2d2d2").toString());
         base.overlay               = QColor(themeConf->value("overlay",               "#f2f2f2").toString());
+        base.tid                   = themeConf->value("tid", "-1").toInt();
         themeConf->endGroup();
         setColorScheme(ColorScheme(base));
     }
@@ -196,6 +201,7 @@ void Settings::saveTheme() {
     themeConf->setValue("scrollbar",             mColorScheme.scrollbar.name());
     themeConf->setValue("overlay_text",          mColorScheme.overlay_text.name());
     themeConf->setValue("overlay",               mColorScheme.overlay.name());
+    themeConf->setValue("tid",                   mColorScheme.tid);
     themeConf->endGroup();
 }
 //------------------------------------------------------------------------------
@@ -206,6 +212,10 @@ const ColorScheme& Settings::colorScheme() {
 void Settings::setColorScheme(ColorScheme scheme) {
     mColorScheme = scheme;
     loadStylesheet();
+}
+//------------------------------------------------------------------------------
+void Settings::setColorTid(int tid) {
+    mColorScheme.tid = tid;
 }
 //------------------------------------------------------------------------------
 void Settings::fillVideoFormats() {
@@ -661,7 +671,7 @@ void Settings::setUseThumbnailCache(bool mode) {
 }
 //------------------------------------------------------------------------------
 QStringList Settings::savedPaths() {
-    return settings->stateConf->value("savedPaths").toStringList();
+    return settings->stateConf->value("savedPaths", QDir::homePath()).toStringList();
 }
 
 void Settings::setSavedPaths(QStringList paths) {
@@ -1057,4 +1067,12 @@ bool Settings::panelCenterSelection() {
 
 void Settings::setPanelCenterSelection(bool mode) {
     settings->settingsConf->setValue("panelCenterSelection", mode);
+}
+//------------------------------------------------------------------------------
+QString Settings::language() {
+    return settingsConf->value("language", "").toString();
+}
+
+void Settings::setLanguage(QString lang) {
+    settingsConf->setValue("language", lang);
 }

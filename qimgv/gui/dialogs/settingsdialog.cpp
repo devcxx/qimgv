@@ -6,7 +6,7 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
     ui(new Ui::SettingsDialog)
 {
     ui->setupUi(this);
-    this->setWindowTitle("Preferences — " + tr("qlimgv"));
+    this->setWindowTitle(tr("Preferences — ") + qApp->applicationName());
 
     ui->shortcutsTableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);   
     ui->aboutAppTextBrowser->viewport()->setAutoFillBackground(false);
@@ -18,24 +18,28 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
     // fake combobox that acts as a menu button
     // less code than using pushbutton with menu
     // will be replaced with something custom later
-    ui->themeSelectorComboBox->setCurrentIndex(-1);
     connect(ui->themeSelectorComboBox, qOverload<int>(&QComboBox::currentIndexChanged), [this](int index) {
         ui->themeSelectorComboBox->blockSignals(true);
-        ui->themeSelectorComboBox->setCurrentIndex(-1);
+        ui->themeSelectorComboBox->setCurrentIndex(index);
         ui->themeSelectorComboBox->blockSignals(false);
         switch(index) {
-            case 0: setColorScheme(ThemeStore::colorScheme(COLORS_BLACK));    break;
-            case 1: setColorScheme(ThemeStore::colorScheme(COLORS_DARK));     break;
-            case 2: setColorScheme(ThemeStore::colorScheme(COLORS_DARKBLUE)); break;
-            case 3: setColorScheme(ThemeStore::colorScheme(COLORS_LIGHT));    break;
+            case 0: setColorScheme(ThemeStore::colorScheme(COLORS_BLACK));    settings->setColorTid(COLORS_BLACK);    break;
+            case 1: setColorScheme(ThemeStore::colorScheme(COLORS_DARK));     settings->setColorTid(COLORS_DARK);     break;
+            case 2: setColorScheme(ThemeStore::colorScheme(COLORS_DARKBLUE)); settings->setColorTid(COLORS_DARKBLUE); break;
+            case 3: setColorScheme(ThemeStore::colorScheme(COLORS_LIGHT));    settings->setColorTid(COLORS_LIGHT);    break;
         }
     });
 
     connect(ui->useSystemColorsCheckBox, &QCheckBox::toggled, [this](bool useSystemTheme) {
-        if(useSystemTheme)
-            setColorScheme(ThemeStore::colorScheme(ColorSchemes::COLORS_SYSTEM));
-        else
+        if(useSystemTheme) {
+            ui->themeSelectorComboBox->setCurrentIndex(-1);
+            setColorScheme(ThemeStore::colorScheme(COLORS_SYSTEM));
+            settings->setColorTid(COLORS_SYSTEM);
+        }
+        else {
             readColorScheme();
+            settings->setColorTid(COLORS_CUSTOMIZED);
+        }
         ui->themeSelectorComboBox->setEnabled(!useSystemTheme);
         ui->colorConfigSubgroup->setEnabled(!useSystemTheme);
         ui->modifySystemSchemeLabel->setVisible(useSystemTheme);
@@ -43,30 +47,31 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
 
     connect(ui->modifySystemSchemeLabel, &ClickableLabel::clicked, [this]() {
         ui->useSystemColorsCheckBox->setChecked(false);
-        setColorScheme(ThemeStore::colorScheme(ColorSchemes::COLORS_SYSTEM));
+        setColorScheme(ThemeStore::colorScheme(COLORS_CUSTOMIZED));
+        settings->setColorTid(COLORS_CUSTOMIZED);
     });
 
-    ui->colorSelectorAccent->setDescription("Accent color");
-    ui->colorSelectorBackground->setDescription("Windowed mode background");
-    ui->colorSelectorFullscreen->setDescription("Fullscreen mode background");
-    ui->colorSelectorFolderview->setDescription("FolderView background");
-    ui->colorSelectorFolderviewPanel->setDescription("FolderView top panel");
-    ui->colorSelectorText->setDescription("Text color");
-    ui->colorSelectorWidget->setDescription("Widget background");
-    ui->colorSelectorWidgetBorder->setDescription("Widget border");
-    ui->colorSelectorOverlay->setDescription("Overlay background");
-    ui->colorSelectorOverlayText->setDescription("Overlay text");
-    ui->colorSelectorScrollbar->setDescription("Scrollbars");
+    ui->colorSelectorAccent->setDescription(tr("Accent color"));
+    ui->colorSelectorBackground->setDescription(tr("Windowed mode background"));
+    ui->colorSelectorFullscreen->setDescription(tr("Fullscreen mode background"));
+    ui->colorSelectorFolderview->setDescription(tr("FolderView background"));
+    ui->colorSelectorFolderviewPanel->setDescription(tr("FolderView top panel"));
+    ui->colorSelectorText->setDescription(tr("Text color"));
+    ui->colorSelectorWidget->setDescription(tr("Widget background"));
+    ui->colorSelectorWidgetBorder->setDescription(tr("Widget border"));
+    ui->colorSelectorOverlay->setDescription(tr("Overlay background"));
+    ui->colorSelectorOverlayText->setDescription(tr("Overlay text"));
+    ui->colorSelectorScrollbar->setDescription(tr("Scrollbars"));
 
 #ifndef USE_KDE_BLUR
     ui->blurBackgroundCheckBox->setEnabled(false);
 #endif
 
 #ifndef USE_MPV
-    ui->videoPlaybackGroup->setEnabled(false);
-    ui->novideoInfoLabel->setHidden(false);
+    //ui->videoPlaybackGroup->setEnabled(false);
+    //ui->novideoInfoLabel->setHidden(false);
 #else
-    ui->novideoInfoLabel->setHidden(true);
+    //ui->novideoInfoLabel->setHidden(true);
 #endif
 
 #ifdef USE_OPENCV
@@ -86,12 +91,52 @@ SettingsDialog::SettingsDialog(QWidget *parent) :
     setupSidebar();
     ui->sideBar->setCurrentRow(0);
 
+    // setup radioBtn groups
+    fitModeGrp.addButton(ui->fitModeWindow);
+    fitModeGrp.addButton(ui->fitModeWidth);
+    fitModeGrp.addButton(ui->fitMode1to1);
+    folderEndGrp.addButton(ui->folderEndSwitchFolder);
+    folderEndGrp.addButton(ui->folderEndNoAction);
+    folderEndGrp.addButton(ui->folderEndLoop);
+    zoomIndGrp.addButton(ui->zoomIndicatorAuto);
+    zoomIndGrp.addButton(ui->zoomIndicatorOff);
+    zoomIndGrp.addButton(ui->zoomIndicatorOn);
+
+    // readable language names
+    langs.insert("en_US", "English");
+    langs.insert("zh_CN", "简体中文");
+    // fill langs combobox, sorted by locale
+    ui->langComboBox->addItems(langs.values());
+    // insert system language entry manually at the beginning
+    langs.insert("system", "System language");
+    ui->langComboBox->insertItem(0, "System language");
+
     connect(this, &SettingsDialog::settingsChanged, settings, &Settings::sendChangeNotification);
     readSettings();
+
+    adjustSizeToContents();
 }
 //------------------------------------------------------------------------------
 SettingsDialog::~SettingsDialog() {
     delete ui;
+}
+//------------------------------------------------------------------------------
+// an attempt to force minimum width to fit contents
+void SettingsDialog::adjustSizeToContents() {
+    // general tab
+    ui->gridLayout_15->activate();
+    ui->scrollAreaWidgetContents->layout()->activate();
+    ui->scrollArea->setMinimumWidth(ui->scrollAreaWidgetContents->minimumSizeHint().width());
+    // container
+    ui->stackedWidget->layout()->activate();
+    this->setMinimumWidth(sizeHint().width() + 22);
+
+    //qDebug() << "window:" << this->sizeHint() << this->minimumSizeHint() << this->size();
+    //qDebug() << "stackedwidget:" << ui->stackedWidget->sizeHint() << ui->stackedWidget->minimumSizeHint() << ui->stackedWidget->size();
+    //qDebug() << "scrollarea:" << ui->scrollArea->sizeHint() << ui->scrollArea->minimumSizeHint() << ui->scrollArea->size();
+    //qDebug() << "scrollareawidget:" << ui->scrollAreaWidgetContents->sizeHint() << ui->scrollAreaWidgetContents->minimumSizeHint() << ui->scrollAreaWidgetContents->size();
+    //qDebug() << "grid" << ui->gridLayout_15->sizeHint();
+    //qDebug() << "wtf" << ui->startInFolderViewCheckBox->sizeHint() << ui->startInFolderViewCheckBox->minimumSizeHint();
 }
 //------------------------------------------------------------------------------
 void SettingsDialog::resetToDesktopTheme() {
@@ -132,10 +177,10 @@ void SettingsDialog::setupSidebar() {
 void SettingsDialog::readSettings() {
     ui->loopSlideshowCheckBox->setChecked(settings->loopSlideshow());
     ui->videoPlaybackCheckBox->setChecked(settings->videoPlayback());
-    ui->videoPlaybackGroupContents->setEnabled(settings->videoPlayback());
+    //ui->videoPlaybackGroupContents->setEnabled(settings->videoPlayback());
     ui->playSoundsCheckBox->setChecked(settings->playVideoSounds());
     ui->enablePanelCheckBox->setChecked(settings->panelEnabled());
-    ui->thumbnailPanelGroupContents->setEnabled(settings->panelEnabled());
+    //ui->thumbnailPanelGroupContents->setEnabled(settings->panelEnabled());
     ui->panelFullscreenOnlyCheckBox->setChecked(settings->panelFullscreenOnly());
     ui->squareThumbnailsCheckBox->setChecked(settings->squareThumbnails());
     ui->transparencyGridCheckBox->setChecked(settings->transparencyGrid());
@@ -206,6 +251,13 @@ void SettingsDialog::readSettings() {
 
     ui->memoryLimitSpinBox->setValue(settings->memoryAllocationLimit());
 
+    // language
+    QString langName = langs.value(settings->language());
+    if(langName.isEmpty() || ui->langComboBox->findText(langName) == -1)
+        ui->langComboBox->setCurrentText("en_US");
+    else
+        ui->langComboBox->setCurrentText(langName);
+
     // ##### fit mode #####
     if(settings->imageFitMode() == FIT_WINDOW)
         ui->fitModeWindow->setChecked(true);
@@ -227,7 +279,7 @@ void SettingsDialog::readSettings() {
     ui->modifySystemSchemeLabel->setVisible(settings->useSystemColorScheme());
     ui->themeSelectorComboBox->setEnabled(!settings->useSystemColorScheme());
     ui->colorConfigSubgroup->setEnabled(!settings->useSystemColorScheme());
-
+    
     readColorScheme();
     readShortcuts();
     readScripts();
@@ -247,6 +299,9 @@ void SettingsDialog::saveSettings() {
         settings->setImageFitMode(FIT_WIDTH);
     else
         settings->setImageFitMode(FIT_ORIGINAL);
+
+    settings->setLanguage(langs.key(ui->langComboBox->currentText()));
+
     settings->setVideoPlayback(ui->videoPlaybackCheckBox->isChecked());
     settings->setPlayVideoSounds(ui->playSoundsCheckBox->isChecked());
     settings->setPanelEnabled(ui->enablePanelCheckBox->isChecked());
@@ -337,6 +392,13 @@ void SettingsDialog::readColorScheme() {
 }
 
 void SettingsDialog::setColorScheme(ColorScheme colors) {
+    switch (colors.tid) {
+        case COLORS_LIGHT: ui->themeSelectorComboBox->setCurrentIndex(3);   break;
+        case COLORS_BLACK: ui->themeSelectorComboBox->setCurrentIndex(0);   break;
+        case COLORS_DARK: ui->themeSelectorComboBox->setCurrentIndex(1);    break;
+        case COLORS_DARKBLUE: ui->themeSelectorComboBox->setCurrentIndex(2);break;
+        default: ui->themeSelectorComboBox->setCurrentIndex(-1);            break;
+    }
     ui->colorSelectorAccent->setColor(colors.accent);
     ui->colorSelectorBackground->setColor(colors.background);
     ui->colorSelectorFullscreen->setColor(colors.background_fullscreen);
@@ -366,6 +428,7 @@ void SettingsDialog::saveColorScheme() {
     base.overlay = ui->colorSelectorOverlay->color();
     base.overlay_text = ui->colorSelectorOverlayText->color();
     base.scrollbar = ui->colorSelectorScrollbar->color();
+    base.tid = settings->colorScheme().tid;
     settings->setColorScheme(ColorScheme(base));
 }
 //------------------------------------------------------------------------------
@@ -490,7 +553,7 @@ void SettingsDialog::removeShortcutAt(int row) {
 void SettingsDialog::editShortcut(int row) {
     if(row >= 0) {
         ShortcutCreatorDialog w;
-        w.setWindowTitle("Edit shortcut");
+        w.setWindowTitle(tr("Edit shortcut"));
         w.setAction(ui->shortcutsTableWidget->item(row, 0)->text());
         w.setShortcut(ui->shortcutsTableWidget->item(row, 1)->text());
         if(!w.exec())
@@ -537,7 +600,7 @@ void SettingsDialog::resetShortcuts() {
 void SettingsDialog::selectMpvPath() {
     QFileDialog dialog;
     QString file;
-    file = dialog.getOpenFileName(this, "Navigate to mpv binary", "", "mpv*");
+    file = dialog.getOpenFileName(this, tr("Navigate to mpv binary"), "", "mpv*");
     if(!file.isEmpty()) {
         ui->mpvLineEdit->setText(file);
     }

@@ -12,6 +12,7 @@
 #include <QDir>
 #include <QKeySequence>
 #include <QMap>
+#include <QFont>
 #include <QVersionNumber>
 #include <QThread>
 #include "utils/script.h"
@@ -231,6 +232,7 @@ public:
 
     const ColorScheme& colorScheme();
     void setColorScheme(ColorScheme scheme);
+    void setColorTid(int tid);
 
     bool videoPlayback();
     void setVideoPlayback(bool mode);
@@ -282,6 +284,8 @@ public:
     void setMemoryAllocationLimit(int limitMB);
     bool panelCenterSelection();
     void setPanelCenterSelection(bool mode);
+    QString language();
+    void setLanguage(QString lang);
 
 private:
     explicit Settings(QObject *parent = nullptr);
