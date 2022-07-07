@@ -16,6 +16,7 @@ BookmarksItem::BookmarksItem(QString _dirName, QString _dirPath, QWidget *parent
     folderIconWidget.installEventFilter(this);
 
     removeItemButton.setIconPath(":/res/icons/common/buttons/panel-small/remove12.png");
+    removeItemButton.setToolTip(tr("Remove"));
     removeItemButton.setMinimumSize(16, 16);
     removeItemButton.installEventFilter(this);
 

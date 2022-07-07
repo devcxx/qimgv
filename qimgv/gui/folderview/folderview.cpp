@@ -33,27 +33,38 @@ FolderView::FolderView(QWidget *parent) :
 #endif
     // -------------------------------
     ui->upButton->setAction("goUp");
+    ui->upButton->setToolTip(tr("Go up"));
     ui->upButton->setIconPath(":res/icons/common/buttons/panel/up16.png");
     ui->upButton->setTriggerMode(TriggerMode::ClickTrigger);
     ui->settingsButton->setAction("openSettings");
     ui->settingsButton->setIconPath(":res/icons/common/buttons/panel/settings16.png");
+    ui->settingsButton->setToolTip(tr("Open settings"));
+    ui->settingsButton->setVisible(false);
+
     ui->exitButton->setAction("exit");
+    ui->exitButton->setToolTip(tr("Exit"));
     ui->exitButton->setIconPath(":res/icons/common/buttons/panel/close16.png");
     ui->exitButton->setIconOffset(-1, 0);
     ui->docViewButton->setAction("documentView");
+    ui->docViewButton->setToolTip(tr("Image view"));
     ui->docViewButton->setIconPath(":res/icons/common/buttons/panel/document-view20.png");
     ui->togglePlacesPanelButton->setCheckable(true);
+    ui->togglePlacesPanelButton->setToolTip(tr("Show/Hide left side panel"));
     ui->togglePlacesPanelButton->setIconPath(":res/icons/common/buttons/panel/toggle-panel20.png");
     ui->togglePlacesPanelButton->setIconOffset(1, 0);
 
     ui->optionsPopupButton->setCheckable(true);
     ui->optionsPopupButton->setIconPath(":res/icons/common/buttons/panel/folderview20.png");
+    ui->optionsPopupButton->setToolTip(tr("View options"));
 
     ui->sortingComboBox->setIconPath(":res/icons/common/other/sorting-mode16.png");
 
     ui->newBookmarkButton->setIconPath(":res/icons/common/buttons/panel-small/add-new12.png");
+    ui->newBookmarkButton->setToolTip(tr("Add bookmark"));
     ui->homeButton->setIconPath(":res/icons/common/buttons/panel-small/home12.png");
+    ui->homeButton->setToolTip(tr("Home"));
     ui->rootButton->setIconPath(":res/icons/common/buttons/panel-small/root12.png");
+    ui->rootButton->setToolTip(tr("Root"));
 
     int min = ui->thumbnailGrid->THUMBNAIL_SIZE_MIN;
     int max = ui->thumbnailGrid->THUMBNAIL_SIZE_MAX;
@@ -63,6 +74,7 @@ FolderView::FolderView(QWidget *parent) :
     ui->zoomSlider->setMaximum(max / step);
     ui->zoomSlider->setSingleStep(1);
     ui->zoomSlider->setPageStep(1);
+    ui->zoomSlider->setToolTip(tr("Scaling & zoom"));
 
     ui->splitter->setStretchFactor(1, 50);
 
@@ -91,6 +103,7 @@ FolderView::FolderView(QWidget *parent) :
     connect(ui->dirTreeView, &TreeViewCustom::tabbedOut, this, &FolderView::onTreeViewTabOut);
     connect(ui->bookmarksWidget, &BookmarksWidget::droppedIn, this, &FolderView::moveUrlsRequested); // ask what to do via popup? copy or move
 
+    ui->sortingComboBox->setToolTip(tr("Image sort"));
     ui->sortingComboBox->setItemDelegate(new QStyledItemDelegate(ui->sortingComboBox));
     ui->sortingComboBox->view()->setTextElideMode(Qt::ElideNone);
 

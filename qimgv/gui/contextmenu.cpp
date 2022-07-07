@@ -15,38 +15,50 @@ ContextMenu::ContextMenu(QWidget *parent) :
     // setup actions
     // top zoom buttons
     ui->zoomIn->setAction("zoomIn");
+    ui->zoomIn->setToolTip(tr("Zoom in"));
     ui->zoomIn->setIconPath(":/res/icons/common/buttons/contextmenu/zoom-in18.png");
     ui->zoomIn->setTriggerMode(TriggerMode::PressTrigger);
     ui->zoomOut->setAction("zoomOut");
-    ui->zoomOut->setIconPath(":/res/icons/common/buttons/contextmenu/zoom-out18.png");
+    ui->zoomOut->setToolTip(tr("Zoom out"));
+    ui->zoomOut->setIconPath(
+                ":/res/icons/common/buttons/contextmenu/zoom-out18.png");
     ui->zoomOut->setTriggerMode(TriggerMode::PressTrigger);
     ui->zoomOriginal->setAction("fitNormal");
+    ui->zoomOriginal->setToolTip(tr("Fit normal"));
     ui->zoomOriginal->setIconPath(":/res/icons/common/buttons/contextmenu/zoom-original18.png");
     ui->zoomOriginal->setTriggerMode(TriggerMode::PressTrigger);
     ui->fitWidth->setAction("fitWidth");
+    ui->fitWidth->setToolTip(tr("Fit width"));
     ui->fitWidth->setIconPath(":/res/icons/common/buttons/contextmenu/fit-width18.png");
     ui->fitWidth->setTriggerMode(TriggerMode::PressTrigger);
     ui->fitWindow->setAction("fitWindow");
+    ui->fitWindow->setToolTip(tr("Fit window"));
     ui->fitWindow->setIconPath(":/res/icons/common/buttons/contextmenu/fit-window18.png");
     ui->fitWindow->setTriggerMode(TriggerMode::PressTrigger);
     // -------------------------------------------------------------------------
     // transform buttons
     ui->rotateLeft->setAction("rotateLeft");
+    ui->rotateLeft->setToolTip(tr("Rotate left"));
     ui->rotateLeft->setIconPath(":/res/icons/common/menuitem/rotate-left16.png");
     ui->rotateLeft->setTriggerMode(TriggerMode::PressTrigger);
     ui->rotateRight->setAction("rotateRight");
+    ui->rotateRight->setToolTip(tr("Rotate right"));
     ui->rotateRight->setIconPath(":/res/icons/common/menuitem/rotate-right16.png");
     ui->rotateRight->setTriggerMode(TriggerMode::PressTrigger);
     ui->flipH->setAction("flipH");
+    ui->flipH->setToolTip(tr("Flip H"));
     ui->flipH->setIconPath(":/res/icons/common/menuitem/flip-h16.png");
     ui->flipH->setTriggerMode(TriggerMode::PressTrigger);
     ui->flipV->setAction("flipV");
+    ui->flipV->setToolTip(tr("Flip V"));
     ui->flipV->setIconPath(":/res/icons/common/menuitem/flip-v16.png");
     ui->flipV->setTriggerMode(TriggerMode::PressTrigger);
     ui->crop->setAction("crop");
+    ui->crop->setToolTip(tr("Crop"));
     ui->crop->setIconPath(":/res/icons/common/menuitem/image-crop16.png");
     ui->crop->setTriggerMode(TriggerMode::PressTrigger);
     ui->resize->setAction("resize");
+    ui->resize->setToolTip(tr("Resize"));
     ui->resize->setIconPath(":/res/icons/common/menuitem/resize16.png");
     ui->resize->setTriggerMode(TriggerMode::PressTrigger);
     // -------------------------------------------------------------------------
@@ -78,10 +90,13 @@ ContextMenu::ContextMenu(QWidget *parent) :
     ui->settings->setAction("openSettings");
     ui->settings->setText(tr("Settings"));
     ui->settings->setIconPath(":/res/icons/common/menuitem/settings16.png");
+    ui->settings->setVisible(false);
+
     // -------------------------------------------------------------------------
     ui->openWith->setText(tr("Open with..."));
     ui->openWith->setIconPath(":/res/icons/common/menuitem/run16.png");
     ui->openWith->setPassthroughClicks(false);
+    ui->openWith->setVisible(false);
     connect(ui->openWith, &ContextMenuItem::pressed, this, &ContextMenu::switchToScriptsPage);
     // -------------------------------------------------------------------------
     ui->showLocation->setAction("showInDirectory");

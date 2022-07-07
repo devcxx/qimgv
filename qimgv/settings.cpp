@@ -920,7 +920,7 @@ void Settings::setZoomIndicatorMode(ZoomIndicatorMode mode) {
 }
 
 ZoomIndicatorMode Settings::zoomIndicatorMode() {
-    int mode = settings->settingsConf->value("zoomIndicatorMode", 0).toInt();
+    int mode = settings->settingsConf->value("zoomIndicatorMode", 2).toInt();
     if(mode < 0 || mode > 2)
         mode = 0;
     return static_cast<ZoomIndicatorMode>(mode);

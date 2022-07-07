@@ -761,7 +761,7 @@ void MW::onInfoUpdated() {
         resString = QString::number(info.imageSize.width()) + " x " + QString::number(info.imageSize.height());
     QString sizeString;
     if(info.fileSize)
-        sizeString = this->locale().formattedDataSize(info.fileSize, 1);
+        sizeString = this->locale().formattedDataSize(info.fileSize, 1, QLocale::DataSizeSIQuantifiers);
 
     if(renameOverlay)
         renameOverlay->setName(info.fileName);

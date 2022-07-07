@@ -4,18 +4,24 @@ MainPanel::MainPanel(FloatingWidgetContainer *parent) : SlidePanel(parent) {
     // buttons stuff
     buttonsWidget.setAccessibleName("panelButtonsWidget");
     openButton       = new ActionButton("open", ":res/icons/common/buttons/panel/open20.png", 30, this);
+    openButton->setToolTip(tr("Open image"));
     openButton->setAccessibleName("ButtonSmall");
     openButton->setTriggerMode(TriggerMode::PressTrigger);
     settingsButton   = new ActionButton("openSettings", ":res/icons/common/buttons/panel/settings20.png", 30, this);
+    settingsButton->setToolTip(tr("Open settings"));
+    settingsButton->setVisible(false);
     settingsButton->setAccessibleName("ButtonSmall");
     settingsButton->setTriggerMode(TriggerMode::PressTrigger);
     exitButton       = new ActionButton("exit", ":res/icons/common/buttons/panel/close16.png", 30, this);
+    exitButton->setToolTip(tr("Exit"));
     exitButton->setAccessibleName("ButtonSmall");
     exitButton->setTriggerMode(TriggerMode::PressTrigger);
     folderViewButton = new ActionButton("folderView", ":res/icons/common/buttons/panel/folderview20.png", 30, this);
+    folderViewButton->setToolTip(tr("Folder view"));
     folderViewButton->setAccessibleName("ButtonSmall");
     folderViewButton->setTriggerMode(TriggerMode::PressTrigger);
     pinButton = new ActionButton("", ":res/icons/common/buttons/panel/pin-panel20.png", 30, this);
+    pinButton->setToolTip(tr("Pin"));
     pinButton->setAccessibleName("ButtonSmall");
     pinButton->setTriggerMode(TriggerMode::PressTrigger);
     pinButton->setCheckable(true);

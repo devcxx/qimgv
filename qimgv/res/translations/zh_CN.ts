@@ -2,6 +2,32 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="zh_CN">
 <context>
+    <name>ArrowTool</name>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/arrowtool.cpp" line="34"/>
+        <source>Pen size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/arrowtool.cpp" line="68"/>
+        <source>Triangle Arrow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/arrowtool.cpp" line="69"/>
+        <source>Line Arrow</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>BookmarksItem</name>
+    <message>
+        <location filename="../../gui/folderview/bookmarksitem.cpp" line="19"/>
+        <source>Remove</source>
+        <translation type="unfinished">删除</translation>
+    </message>
+</context>
+<context>
     <name>ChangelogWindow</name>
     <message>
         <location filename="../../gui/overlays/changelogwindow.ui" line="154"/>
@@ -17,81 +43,112 @@
 <context>
     <name>ContextMenu</name>
     <message>
+        <location filename="../../gui/contextmenu.cpp" line="18"/>
+        <source>Zoom in</source>
+        <translation type="unfinished">放大</translation>
+    </message>
+    <message>
+        <location filename="../../gui/contextmenu.cpp" line="22"/>
+        <source>Zoom out</source>
+        <translation type="unfinished">缩小</translation>
+    </message>
+    <message>
+        <location filename="../../gui/contextmenu.cpp" line="27"/>
+        <source>Fit normal</source>
+        <translation type="unfinished">适应 1:1</translation>
+    </message>
+    <message>
+        <location filename="../../gui/contextmenu.cpp" line="31"/>
+        <source>Fit width</source>
+        <translation type="unfinished">适应宽度</translation>
+    </message>
+    <message>
+        <location filename="../../gui/contextmenu.cpp" line="35"/>
+        <source>Fit window</source>
+        <translation type="unfinished">适配窗口</translation>
+    </message>
+    <message>
+        <location filename="../../gui/contextmenu.cpp" line="41"/>
         <source>Rotate left</source>
-        <translation type="vanished">向左旋转</translation>
+        <translation>向左旋转</translation>
     </message>
     <message>
+        <location filename="../../gui/contextmenu.cpp" line="45"/>
         <source>Rotate right</source>
-        <translation type="vanished">向右旋转</translation>
+        <translation>向右旋转</translation>
     </message>
     <message>
+        <location filename="../../gui/contextmenu.cpp" line="49"/>
         <source>Flip H</source>
-        <translation type="vanished">水平翻转</translation>
+        <translation>水平翻转</translation>
     </message>
     <message>
+        <location filename="../../gui/contextmenu.cpp" line="53"/>
         <source>Flip V</source>
-        <translation type="vanished">垂直翻转</translation>
+        <translation>垂直翻转</translation>
     </message>
     <message>
+        <location filename="../../gui/contextmenu.cpp" line="57"/>
         <source>Crop</source>
-        <translation type="vanished">裁剪</translation>
+        <translation>裁剪</translation>
     </message>
     <message>
+        <location filename="../../gui/contextmenu.cpp" line="61"/>
         <source>Resize</source>
-        <translation type="vanished">调整大小</translation>
+        <translation>调整大小</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="55"/>
+        <location filename="../../gui/contextmenu.cpp" line="67"/>
         <source>Print</source>
         <translation type="unfinished">打印</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="59"/>
+        <location filename="../../gui/contextmenu.cpp" line="71"/>
         <source>Quick copy</source>
         <translation>快速拷贝</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="63"/>
+        <location filename="../../gui/contextmenu.cpp" line="75"/>
         <source>Quick move</source>
         <translation>快速移动</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="67"/>
+        <location filename="../../gui/contextmenu.cpp" line="79"/>
         <source>Move to trash</source>
         <translation>移到回收站</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="71"/>
+        <location filename="../../gui/contextmenu.cpp" line="83"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="75"/>
+        <location filename="../../gui/contextmenu.cpp" line="87"/>
         <source>Folder View</source>
         <translation>文件夹视图</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="79"/>
+        <location filename="../../gui/contextmenu.cpp" line="91"/>
         <source>Settings</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="82"/>
+        <location filename="../../gui/contextmenu.cpp" line="96"/>
         <source>Open with...</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="88"/>
+        <location filename="../../gui/contextmenu.cpp" line="103"/>
         <source>Show in folder</source>
         <translation>在文件管理器中显示</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="96"/>
+        <location filename="../../gui/contextmenu.cpp" line="111"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="99"/>
+        <location filename="../../gui/contextmenu.cpp" line="114"/>
         <source>Configure menu</source>
         <translation type="unfinished"></translation>
     </message>
@@ -428,6 +485,32 @@
     </message>
 </context>
 <context>
+    <name>EditCore</name>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/core/edit_core.cpp" line="268"/>
+        <source>Save File</source>
+        <translation type="unfinished">保存文件</translation>
+    </message>
+</context>
+<context>
+    <name>EraseTool</name>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/erasetool.cpp" line="28"/>
+        <source>General erase</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/erasetool.cpp" line="29"/>
+        <source>Region erase</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/erasetool.cpp" line="35"/>
+        <source>Erase size</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FVOptionsPopup</name>
     <message>
         <location filename="../../gui/folderview/fvoptionspopup.ui" line="32"/>
@@ -593,6 +676,69 @@
         <source>FILESYSTEM</source>
         <translation>文件系统</translation>
     </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="36"/>
+        <source>Go up</source>
+        <translation type="unfinished">向上</translation>
+    </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="41"/>
+        <source>Open settings</source>
+        <translation type="unfinished">打开设置</translation>
+    </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="45"/>
+        <source>Exit</source>
+        <translation type="unfinished">退出</translation>
+    </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="49"/>
+        <source>Image view</source>
+        <translation type="unfinished">图片视图</translation>
+    </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="52"/>
+        <source>Show/Hide left side panel</source>
+        <translation type="unfinished">显示/隐藏 左侧面板</translation>
+    </message>
+    <message>
+        <source>Show/Hide side panel</source>
+        <translation type="obsolete">显示/隐藏 左侧面板</translation>
+    </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="77"/>
+        <source>Scaling &amp; zoom</source>
+        <translation type="unfinished">缩放</translation>
+    </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="106"/>
+        <source>Image sort</source>
+        <translation type="unfinished">图片排序</translation>
+    </message>
+    <message>
+        <source>Show/Hide</source>
+        <translation type="obsolete">显示/隐藏</translation>
+    </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="58"/>
+        <source>View options</source>
+        <translation type="unfinished">查看选项</translation>
+    </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="63"/>
+        <source>Add bookmark</source>
+        <translation type="unfinished">添加书签</translation>
+    </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="65"/>
+        <source>Home</source>
+        <translation type="unfinished">主页</translation>
+    </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="67"/>
+        <source>Root</source>
+        <translation type="unfinished">根目录</translation>
+    </message>
 </context>
 <context>
     <name>ImageInfoOverlay</name>
@@ -655,6 +801,83 @@
         <location filename="../../gui/mainwindow.cpp" line="846"/>
         <source>Fit 1:1</source>
         <translation>适应 1:1</translation>
+    </message>
+</context>
+<context>
+    <name>MainPanel</name>
+    <message>
+        <location filename="../../gui/panels/mainpanel/mainpanel.cpp" line="7"/>
+        <source>Open image</source>
+        <translation type="unfinished">打开图片</translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/mainpanel/mainpanel.cpp" line="11"/>
+        <source>Open settings</source>
+        <translation type="unfinished">打开设置</translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/mainpanel/mainpanel.cpp" line="16"/>
+        <source>Exit</source>
+        <translation type="unfinished">退出</translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/mainpanel/mainpanel.cpp" line="20"/>
+        <source>Folder view</source>
+        <translation type="unfinished">文件夹视图</translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/mainpanel/mainpanel.cpp" line="24"/>
+        <source>Pin</source>
+        <translation type="unfinished">Pin</translation>
+    </message>
+</context>
+<context>
+    <name>PenTool</name>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/pentool.cpp" line="23"/>
+        <source>Pen size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/pentool.cpp" line="57"/>
+        <source>Point</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/pentool.cpp" line="58"/>
+        <source>Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/pentool.cpp" line="59"/>
+        <source>Dash Line</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/pentool.cpp" line="60"/>
+        <source>Curve</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PinWidget</name>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/pinwidget.cpp" line="11"/>
+        <source>Pin Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>PixelPanel</name>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/pixelpanel.cpp" line="101"/>
+        <source>[C] copy color value</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/pixelpanel.cpp" line="102"/>
+        <source>[Shift+A] RGB/HEX</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1654,7 +1877,7 @@ Press ESC to cancel</source>
     <message>
         <location filename="../../gui/dialogs/settingsdialog.ui" line="872"/>
         <source>Pin</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pin</translation>
     </message>
     <message>
         <location filename="../../gui/dialogs/settingsdialog.ui" line="547"/>
@@ -2201,6 +2424,39 @@ p, li { white-space: pre-wrap; }
     </message>
 </context>
 <context>
+    <name>ShapeTool</name>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="42"/>
+        <source>Border</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="43"/>
+        <source>Fill</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="44"/>
+        <source>Rectangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="45"/>
+        <source>Circle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="46"/>
+        <source>Triangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="47"/>
+        <source>Vertical triangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ShortcutCreatorDialog</name>
     <message>
         <location filename="../../gui/dialogs/shortcutcreatordialog.ui" line="14"/>
@@ -2226,6 +2482,107 @@ p, li { white-space: pre-wrap; }
         <location filename="../../gui/dialogs/shortcutcreatordialog.ui" line="124"/>
         <source>[Enter shortcut]</source>
         <translation>[输入快捷方式]</translation>
+    </message>
+</context>
+<context>
+    <name>TextTool</name>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="32"/>
+        <source>Font families</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="33"/>
+        <source>Font size</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="47"/>
+        <source>Bold</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="48"/>
+        <source>Underline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="49"/>
+        <source>Italic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="50"/>
+        <source>StrikeOut</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ToolWidget</name>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="44"/>
+        <source>shape tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="45"/>
+        <source>pen tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="46"/>
+        <source>text tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="47"/>
+        <source>arrow tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="48"/>
+        <source>blur</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="49"/>
+        <source>Brush tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="50"/>
+        <source>erase tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="51"/>
+        <source>undo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="52"/>
+        <source>redo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="53"/>
+        <source>close</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="54"/>
+        <source>pin tool</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="55"/>
+        <source>save to file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="56"/>
+        <source>copy to clipboard</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
