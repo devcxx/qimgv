@@ -164,18 +164,18 @@ void Settings::loadTheme() {
     } else {
         BaseColorScheme base;
         themeConf->beginGroup("Colors");
-        base.background            = QColor(themeConf->value("background",            "#1a1a1a").toString());
-        base.background_fullscreen = QColor(themeConf->value("background_fullscreen", "#1a1a1a").toString());
-        base.text                  = QColor(themeConf->value("text",                  "#b6b6b6").toString());
-        base.icons                 = QColor(themeConf->value("icons",                 "#a4a4a4").toString());
-        base.widget                = QColor(themeConf->value("widget",                "#252525").toString());
-        base.widget_border         = QColor(themeConf->value("widget_border",         "#2c2c2c").toString());
-        base.accent                = QColor(themeConf->value("accent",                "#8c9b81").toString());
-        base.folderview            = QColor(themeConf->value("folderview",            "#242424").toString());
-        base.folderview_topbar     = QColor(themeConf->value("folderview_topbar",     "#383838").toString());
-        base.scrollbar             = QColor(themeConf->value("scrollbar",             "#5a5a5a").toString());
+        base.background            = QColor(themeConf->value("background",            "#f2f2f2").toString());
+        base.background_fullscreen = QColor(themeConf->value("background_fullscreen", "#f2f2f2").toString());
+        base.text                  = QColor(themeConf->value("text",                  "#353535").toString());
+        base.icons                 = QColor(themeConf->value("icons",                 "#656768").toString());
+        base.widget                = QColor(themeConf->value("widget",                "#ffffff").toString());
+        base.widget_border         = QColor(themeConf->value("widget_border",         "#c3c3c3").toString());
+        base.accent                = QColor(themeConf->value("accent",                "#719ccd").toString());
+        base.folderview            = QColor(themeConf->value("folderview",            "#f2f2f2").toString());
+        base.folderview_topbar     = QColor(themeConf->value("folderview_topbar",     "#ffffff").toString());
+        base.scrollbar             = QColor(themeConf->value("scrollbar",             "#aaaaaa").toString());
         base.overlay_text          = QColor(themeConf->value("overlay_text",          "#d2d2d2").toString());
-        base.overlay               = QColor(themeConf->value("overlay",               "#1a1a1a").toString());
+        base.overlay               = QColor(themeConf->value("overlay",               "#f2f2f2").toString());
         themeConf->endGroup();
         setColorScheme(ColorScheme(base));
     }
@@ -398,7 +398,7 @@ void Settings::setFolderViewMode(FolderViewMode mode) {
 }
 //------------------------------------------------------------------------------
 ThumbPanelStyle Settings::thumbPanelStyle() {
-    int mode = settings->settingsConf->value("thumbPanelStyle", 1).toInt();
+    int mode = settings->settingsConf->value("thumbPanelStyle", 0).toInt();
     if(mode < 0 || mode > 1)
         mode = 1;
     return static_cast<ThumbPanelStyle>(mode);
@@ -466,7 +466,7 @@ void Settings::setPanelEnabled(bool mode) {
 }
 //------------------------------------------------------------------------------
 bool Settings::panelFullscreenOnly() {
-    return settings->settingsConf->value("panelFullscreenOnly", true).toBool();
+    return settings->settingsConf->value("panelFullscreenOnly", false).toBool();
 }
 
 void Settings::setPanelFullscreenOnly(bool mode) {
@@ -482,7 +482,7 @@ void Settings::setLastDisplay(int display) {
 }
 //------------------------------------------------------------------------------
 PanelPosition Settings::panelPosition() {
-    QString posString = settings->settingsConf->value("panelPosition", "top").toString();
+    QString posString = settings->settingsConf->value("panelPosition", "bottom").toString();
     if(posString == "top") {
         return PanelPosition::PANEL_TOP;
     } else if(posString == "bottom") {
