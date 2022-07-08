@@ -15,6 +15,7 @@
 #include "components/scriptmanager/scriptmanager.h"
 #include "gui/mainwindow.h"
 #include "utils/randomizer.h"
+#include "utils/wallpapersetter.h"
 #include "gui/dialogs/printdialog.h"
 
 #ifdef __GLIBC__

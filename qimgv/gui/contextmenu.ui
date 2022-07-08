@@ -572,9 +572,6 @@
           <widget class="ContextMenuItem" name="folderView" native="true"/>
          </item>
          <item>
-          <widget class="ContextMenuItem" name="settings" native="true"/>
-         </item>
-         <item>
           <spacer name="verticalSpacer_4">
            <property name="orientation">
             <enum>Qt::Vertical</enum>
@@ -591,23 +588,7 @@
           </spacer>
          </item>
          <item>
-          <widget class="ContextMenuItem" name="openWith" native="true"/>
-         </item>
-         <item>
-          <spacer name="verticalSpacer_5">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
-           </property>
-           <property name="sizeType">
-            <enum>QSizePolicy::Fixed</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>6</height>
-            </size>
-           </property>
-          </spacer>
+          <widget class="ContextMenuItem" name="setWallpaper" native="true"/>
          </item>
          <item>
           <widget class="ContextMenuItem" name="showLocation" native="true"/>

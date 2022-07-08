@@ -87,17 +87,19 @@ ContextMenu::ContextMenu(QWidget *parent) :
     ui->folderView->setText(tr("Folder View"));
     ui->folderView->setIconPath(":/res/icons/common/menuitem/folderview16.png");
 
-    ui->settings->setAction("openSettings");
-    ui->settings->setText(tr("Settings"));
-    ui->settings->setIconPath(":/res/icons/common/menuitem/settings16.png");
-    ui->settings->setVisible(false);
+//    ui->settings->setAction("openSettings");
+//    ui->settings->setText(tr("Settings"));
+//    ui->settings->setIconPath(":/res/icons/common/menuitem/settings16.png");
 
     // -------------------------------------------------------------------------
-    ui->openWith->setText(tr("Open with..."));
-    ui->openWith->setIconPath(":/res/icons/common/menuitem/run16.png");
-    ui->openWith->setPassthroughClicks(false);
-    ui->openWith->setVisible(false);
-    connect(ui->openWith, &ContextMenuItem::pressed, this, &ContextMenu::switchToScriptsPage);
+//    ui->openWith->setText(tr("Open with..."));
+//    ui->openWith->setIconPath(":/res/icons/common/menuitem/run16.png");
+//    ui->openWith->setPassthroughClicks(false);
+//    connect(ui->openWith, &ContextMenuItem::pressed, this, &ContextMenu::switchToScriptsPage);
+    // -------------------------------------------------------------------------
+    ui->setWallpaper->setAction("setWallpaper");
+    ui->setWallpaper->setText(tr("Set as wallpaper"));
+    ui->setWallpaper->setIconPath(":/res/icons/common/menuitem/document-view16.png");
     // -------------------------------------------------------------------------
     ui->showLocation->setAction("showInDirectory");
     ui->showLocation->setText(tr("Show in folder"));
@@ -155,7 +157,7 @@ void ContextMenu::setImageEntriesEnabled(bool mode) {
     ui->copy->setEnabled(mode);
     ui->move->setEnabled(mode);
     ui->trash->setEnabled(mode);
-    ui->openWith->setEnabled(mode);
+//    ui->openWith->setEnabled(mode);
     ui->showLocation->setEnabled(mode);
 }
 

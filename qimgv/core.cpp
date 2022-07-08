@@ -1138,6 +1138,9 @@ void Core::setWallpaper() {
         mw->showMessage("Set wallpaper: file not supported");
         return;
     }
+
+    WallpaperSetter::setWallpaper(selectedPath());
+/**
 #ifdef __WIN32
     // set fit mode (registry)
     LONG status;
@@ -1160,6 +1163,7 @@ void Core::setWallpaper() {
     else
         mw->showMessage("Action is not supported in your desktop session (\"" + session + "\")", 3000);
 #endif
+**/
 }
 
 void Core::print() {

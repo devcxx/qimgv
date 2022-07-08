@@ -49,7 +49,7 @@ FolderView::FolderView(QWidget *parent) :
     ui->docViewButton->setToolTip(tr("Image view"));
     ui->docViewButton->setIconPath(":res/icons/common/buttons/panel/document-view20.png");
     ui->togglePlacesPanelButton->setCheckable(true);
-    ui->togglePlacesPanelButton->setToolTip(tr("Show/Hide left side panel"));
+    ui->togglePlacesPanelButton->setToolTip(tr("Hide left side panel"));
     ui->togglePlacesPanelButton->setIconPath(":res/icons/common/buttons/panel/toggle-panel20.png");
     ui->togglePlacesPanelButton->setIconOffset(1, 0);
 
@@ -138,6 +138,7 @@ void FolderView::onSplitterMoved() {
 }
 
 void FolderView::onPlacesPanelButtonChecked(bool mode) {
+    ui->togglePlacesPanelButton->setToolTip(mode ? tr("Hide left side panel") : tr("Show left side panel"));
     setPlacesPanel(mode);
     settings->setPlacesPanel(mode);
 }

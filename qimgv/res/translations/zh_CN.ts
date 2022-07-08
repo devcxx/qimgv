@@ -128,27 +128,26 @@
         <translation>文件夹视图</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="91"/>
         <source>Settings</source>
-        <translation>设置</translation>
+        <translation type="vanished">设置</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="96"/>
-        <source>Open with...</source>
-        <translation type="unfinished"></translation>
+        <location filename="../../gui/contextmenu.cpp" line="101"/>
+        <source>Set as wallpaper</source>
+        <translation type="unfinished">设置为壁纸</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="103"/>
+        <location filename="../../gui/contextmenu.cpp" line="105"/>
         <source>Show in folder</source>
         <translation>在文件管理器中显示</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="111"/>
+        <location filename="../../gui/contextmenu.cpp" line="113"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="114"/>
+        <location filename="../../gui/contextmenu.cpp" line="116"/>
         <source>Configure menu</source>
         <translation type="unfinished"></translation>
     </message>
@@ -371,37 +370,37 @@
         <translation>不能保存文件</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1171"/>
+        <location filename="../../core.cpp" line="1175"/>
         <source>Could not open image</source>
         <translation>不能打开图片</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1175"/>
+        <location filename="../../core.cpp" line="1179"/>
         <source>Can only print static images</source>
         <translation>只能打印静态图片</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1226"/>
+        <location filename="../../core.cpp" line="1230"/>
         <source>Could not open path: </source>
         <translation>不能打开的路径: </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1260"/>
+        <location filename="../../core.cpp" line="1264"/>
         <source>Could not load folder: </source>
         <translation>不能载入的目录: </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1413"/>
+        <location filename="../../core.cpp" line="1417"/>
         <source>End of directory.</source>
         <translation>目录末尾.</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1452"/>
+        <location filename="../../core.cpp" line="1456"/>
         <source>Load failed: </source>
         <translation>加载失败: </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1496"/>
+        <location filename="../../core.cpp" line="1500"/>
         <source>Error: could not load image.</source>
         <translation>错误: 不能载入图片.</translation>
     </message>
@@ -698,8 +697,18 @@
     </message>
     <message>
         <location filename="../../gui/folderview/folderview.cpp" line="52"/>
+        <location filename="../../gui/folderview/folderview.cpp" line="141"/>
+        <source>Hide left side panel</source>
+        <translation type="unfinished">隐藏左侧面板</translation>
+    </message>
+    <message>
+        <location filename="../../gui/folderview/folderview.cpp" line="141"/>
+        <source>Show left side panel</source>
+        <translation type="unfinished">显示左侧面板</translation>
+    </message>
+    <message>
         <source>Show/Hide left side panel</source>
-        <translation type="unfinished">显示/隐藏 左侧面板</translation>
+        <translation type="obsolete">显示/隐藏 左侧面板</translation>
     </message>
     <message>
         <source>Show/Hide side panel</source>
