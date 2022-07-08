@@ -2,6 +2,7 @@
 #include <QCommandLineParser>
 #include <QStyleFactory>
 #include <QEvent>
+#include <QStandardPaths>
 
 #include "appversion.h"
 #include "settings.h"
@@ -153,7 +154,7 @@ int main(int argc, char *argv[]) {
     if(parser.positionalArguments().count())
         core.loadPath(parser.positionalArguments().at(0));
     else if(settings->defaultViewMode() == MODE_FOLDERVIEW)
-        core.loadPath(QDir::homePath());
+        core.loadPath(QStandardPaths::standardLocations(QStandardPaths::PicturesLocation).first());
 
     // wait for event queue to catch up before showing window
     // this avoids white background flicker on windows (or not?)

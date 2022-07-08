@@ -808,7 +808,7 @@ void MW::onInfoUpdated() {
 }
 
 // TODO!!! buffer this in mw
-void MW::setExifInfo(QMap<QString, QString> info) {
+void MW::setExifInfo(OrderedMap<QString, QString> info) {
     if(imageInfoOverlay)
         imageInfoOverlay->setExifInfo(info);
 }

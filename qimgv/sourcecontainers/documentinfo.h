@@ -10,6 +10,7 @@
 #include <cmath>
 #include <cstring>
 #include "utils/stuff.h"
+#include "utils/orderedmap.h"
 #include "settings.h"
 
 #ifdef USE_EXIV2
@@ -45,7 +46,7 @@ public:
     QDateTime lastModified() const;
     void refresh();
     void loadExifTags();
-    QMap<QString, QString> getExifTags();
+    OrderedMap<QString, QString> getExifTags();
 
 private:
     QFileInfo fileInfo;
@@ -62,6 +63,6 @@ private:
     bool detectAnimatedWebP();
     bool detectAnimatedJxl();
     bool detectAnimatedAvif();
-    QMap<QString, QString> exifTags;
+    OrderedMap<QString, QString> exifTags;
     QMimeType mMimeType;
 };

@@ -6,6 +6,7 @@
 #include <memory>
 #include "utils/imagelib.h"
 #include "utils/stuff.h"
+#include "utils/orderedmap.h"
 #include "sourcecontainers/documentinfo.h"
 
 class Image {
@@ -28,7 +29,8 @@ public:
     bool isEdited() const;
     qint64 fileSize() const;
     QDateTime lastModified() const;
-    QMap<QString, QString> getExifTags();
+    OrderedMap<QString, QString> getExifTags();
+    OrderedMap<QString, QString> getAllTags();
 
 protected:
     virtual void load() = 0;

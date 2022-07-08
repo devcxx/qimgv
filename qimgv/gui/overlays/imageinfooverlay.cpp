@@ -11,7 +11,7 @@ ImageInfoOverlay::ImageInfoOverlay(FloatingWidgetContainer *parent) :
     entryStub.setFixedSize(280, 48);
     entryStub.setAlignment(Qt::AlignHCenter | Qt::AlignVCenter);
     connect(ui->closeButton,  &IconButton::clicked, this, &ImageInfoOverlay::hide);
-    this->setPosition(FloatingWidgetPosition::RIGHT);
+    this->setPosition(FloatingWidgetPosition::TOPRIGHT);
 
     if(parent)
         setContainerSize(parent->size());
@@ -23,7 +23,7 @@ ImageInfoOverlay::~ImageInfoOverlay() {
         delete entries.takeAt(i);
 }
 
-void ImageInfoOverlay::setExifInfo(QMap<QString, QString> info) {
+void ImageInfoOverlay::setExifInfo(OrderedMap<QString, QString> info) {
     // remove/add entries
     int entryCount = entries.count();
     if(entryCount > info.count()) {
@@ -37,9 +37,9 @@ void ImageInfoOverlay::setExifInfo(QMap<QString, QString> info) {
             ui->entryLayout->addWidget(entries.last());
         }
     }
-    QMap<QString, QString>::const_iterator i = info.constBegin();
+    OrderedMap<QString, QString>::const_iterator i = info.begin();
     int entryIdx = 0;
-    while(i != info.constEnd()) {
+    while(i != info.end()) {
         entries.at(entryIdx)->setInfo(i.key(), i.value());
         ++i;
         ++entryIdx;
@@ -73,3 +73,4 @@ void ImageInfoOverlay::show() {
 void ImageInfoOverlay::wheelEvent(QWheelEvent *event) {
     event->accept();
 }
+

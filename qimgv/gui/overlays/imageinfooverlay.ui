@@ -117,7 +117,7 @@
          </font>
         </property>
         <property name="text">
-         <string>EXIF Tags</string>
+         <string>Image information</string>
         </property>
        </widget>
       </item>

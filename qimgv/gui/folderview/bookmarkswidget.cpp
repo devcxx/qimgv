@@ -18,7 +18,7 @@ void BookmarksWidget::readSettings() {
     for(auto path : _paths)
         addBookmark(path);
     if(_paths.empty())
-        addBookmark(QDir::homePath());
+        addBookmark(QStandardPaths::standardLocations(QStandardPaths::PicturesLocation).first());
 }
 
 void BookmarksWidget::saveBookmarks() {

@@ -32,7 +32,7 @@ bool ImageInfoOverlayProxy::isHidden() {
     return overlay ? overlay->isHidden() : true;
 }
 
-void ImageInfoOverlayProxy::setExifInfo(QMap<QString, QString> _info) {
+void ImageInfoOverlayProxy::setExifInfo(OrderedMap<QString, QString> _info) {
     if(overlay)
         overlay->setExifInfo(_info);
     else

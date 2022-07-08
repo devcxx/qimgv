@@ -593,6 +593,9 @@
          <item>
           <widget class="ContextMenuItem" name="showLocation" native="true"/>
          </item>
+         <item>
+          <widget class="ContextMenuItem" name="imageInfo" native="true"/>
+         </item>
         </layout>
        </item>
       </layout>

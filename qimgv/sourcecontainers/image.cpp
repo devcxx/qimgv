@@ -51,7 +51,19 @@ QDateTime Image::lastModified() const {
     return mDocInfo->lastModified();
 }
 
-QMap<QString, QString> Image::getExifTags() {
+OrderedMap<QString, QString> Image::getExifTags() {
     return mDocInfo->getExifTags();
+}
+
+OrderedMap<QString, QString> Image::getAllTags()
+{
+    OrderedMap<QString, QString> tags;
+    tags.insert(QObject::tr("Name"), fileName());
+    tags.insert(QObject::tr("Type"), mDocInfo->mimeType().name());
+    tags.insert(QObject::tr("Size"), QLocale().formattedDataSize(fileSize(), 1));
+    tags.insert(QObject::tr("Modified date"), lastModified().toString("yyyy-MM-dd hh:mm"));
+    tags.insert(QObject::tr("Width"), QString::number(width()));
+    tags.insert(QObject::tr("Height"), QString::number(height()));
+    return tags;
 }
 

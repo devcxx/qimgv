@@ -960,7 +960,7 @@ void Settings::setImageScrolling(ImageScrolling mode) {
 }
 //------------------------------------------------------------------------------
 ViewMode Settings::defaultViewMode() {
-    int mode = settings->settingsConf->value("defaultViewMode", 0).toInt();
+    int mode = settings->settingsConf->value("defaultViewMode", 1).toInt();
     if(mode < 0 || mode > 1)
         mode = 0;
     return static_cast<ViewMode>(mode);

@@ -105,7 +105,9 @@ unix {
 HEADERS += \
     components/directorymanager/watchers/linux/linuxfsevent.h \
     components/directorymanager/watchers/linux/linuxwatcher.h \
+    components/directorymanager/watchers/linux/linuxwatcher_p.h \
     components/directorymanager/watchers/linux/linuxworker.h \
+
 SOURCES += \
     components/directorymanager/watchers/linux/linuxfsevent.cpp \
     components/directorymanager/watchers/linux/linuxwatcher.cpp \

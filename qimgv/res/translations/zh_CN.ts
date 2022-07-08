@@ -128,26 +128,31 @@
         <translation>文件夹视图</translation>
     </message>
     <message>
+        <location filename="../../gui/contextmenu.cpp" line="101"/>
+        <source>Image information</source>
+        <translation type="unfinished">图片信息</translation>
+    </message>
+    <message>
         <source>Settings</source>
         <translation type="vanished">设置</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="101"/>
+        <location filename="../../gui/contextmenu.cpp" line="105"/>
         <source>Set as wallpaper</source>
         <translation type="unfinished">设置为壁纸</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="105"/>
+        <location filename="../../gui/contextmenu.cpp" line="109"/>
         <source>Show in folder</source>
         <translation>在文件管理器中显示</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="113"/>
+        <location filename="../../gui/contextmenu.cpp" line="117"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="116"/>
+        <location filename="../../gui/contextmenu.cpp" line="120"/>
         <source>Configure menu</source>
         <translation type="unfinished"></translation>
     </message>
@@ -758,8 +763,12 @@
     </message>
     <message>
         <location filename="../../gui/overlays/imageinfooverlay.ui" line="120"/>
+        <source>Image information</source>
+        <translation type="unfinished">图片信息</translation>
+    </message>
+    <message>
         <source>EXIF Tags</source>
-        <translation>EXIF标签</translation>
+        <translation type="vanished">EXIF标签</translation>
     </message>
 </context>
 <context>
@@ -1152,6 +1161,36 @@ Press ESC to cancel</source>
         <location filename="../../utils/fileoperations.cpp" line="61"/>
         <source>Other error.</source>
         <translation>其它错误.</translation>
+    </message>
+    <message>
+        <location filename="../../sourcecontainers/image.cpp" line="61"/>
+        <source>Name</source>
+        <translation type="unfinished">名称</translation>
+    </message>
+    <message>
+        <location filename="../../sourcecontainers/image.cpp" line="62"/>
+        <source>Type</source>
+        <translation type="unfinished">类型</translation>
+    </message>
+    <message>
+        <location filename="../../sourcecontainers/image.cpp" line="63"/>
+        <source>Size</source>
+        <translation type="unfinished">大小</translation>
+    </message>
+    <message>
+        <location filename="../../sourcecontainers/image.cpp" line="64"/>
+        <source>Modified date</source>
+        <translation type="unfinished">修改时间</translation>
+    </message>
+    <message>
+        <location filename="../../sourcecontainers/image.cpp" line="65"/>
+        <source>Width</source>
+        <translation type="unfinished">宽度</translation>
+    </message>
+    <message>
+        <location filename="../../sourcecontainers/image.cpp" line="66"/>
+        <source>Height</source>
+        <translation type="unfinished">高度</translation>
     </message>
 </context>
 <context>

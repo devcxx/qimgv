@@ -276,7 +276,7 @@ void DocumentInfo::loadExifTags() {
 #endif
 }
 
-QMap<QString, QString> DocumentInfo::getExifTags() {
+OrderedMap<QString, QString> DocumentInfo::getExifTags() {
     if(!exifLoaded)
         loadExifTags();
     return exifTags;

@@ -97,6 +97,10 @@ ContextMenu::ContextMenu(QWidget *parent) :
 //    ui->openWith->setPassthroughClicks(false);
 //    connect(ui->openWith, &ContextMenuItem::pressed, this, &ContextMenu::switchToScriptsPage);
     // -------------------------------------------------------------------------
+    ui->imageInfo->setAction("toggleImageInfo");
+    ui->imageInfo->setText(tr("Image information"));
+    ui->imageInfo->setIconPath(":/res/icons/common/overlay/info16.png");
+    // -------------------------------------------------------------------------
     ui->setWallpaper->setAction("setWallpaper");
     ui->setWallpaper->setText(tr("Set as wallpaper"));
     ui->setWallpaper->setIconPath(":/res/icons/common/menuitem/document-view16.png");
