@@ -10,6 +10,8 @@ CONFIG += c++17
 
 DEFINES += QT_DEPRECATED_WARNINGS
 
+DESTDIR = $$PWD/bin
+
 HEADERS += \
     appversion.h \
     core.h \
@@ -33,6 +35,7 @@ SOURCES += \
 
 RESOURCES += \
     resources.qrc \
+    edittool.qrc \
 
 RC_FILE = qimgv.rc
 
@@ -288,6 +291,70 @@ SOURCES += \
     gui/panels/infobar/infobar.cpp \
     gui/panels/infobar/infobarproxy.cpp \
 
+# components/edittool
+HEADERS += \
+    components/edittool/editeviewer.h \
+    components/edittool/core/edit_core.h \
+    components/edittool/core/core_fs_check.h \
+    components/edittool/core/core_system.h \
+    components/edittool/drawer/arrowdrawer.h \
+    components/edittool/drawer/drawer.h \
+    components/edittool/drawer/erasedrawer.h \
+    components/edittool/drawer/imageblurdrawer.h \
+    components/edittool/drawer/pendrawer.h \
+    components/edittool/drawer/rectangleblurdrawer.h \
+    components/edittool/drawer/shapedrawer.h \
+    components/edittool/drawer/textdrawer.h \
+    components/edittool/tool/arrowtool.h \
+    components/edittool/tool/basetool.h \
+    components/edittool/tool/erasetool.h \
+    components/edittool/tool/pentool.h \
+    components/edittool/tool/shapetool.h \
+    components/edittool/tool/texttool.h \
+    components/edittool/widget/basebutton.h \
+    components/edittool/widget/basecombobox.h \
+    components/edittool/widget/colorpanel.h \
+    components/edittool/widget/colorpicker.h \
+    components/edittool/widget/customtextedit.h \
+    components/edittool/widget/inputtextedit.h \
+    components/edittool/widget/pinwidget.h \
+    components/edittool/widget/pixelpanel.h \
+    components/edittool/widget/pixelwidget.h \
+    components/edittool/widget/separator.h \
+    components/edittool/widget/toolwidget.h
+
+# components/edittool
+SOURCES += \
+    components/edittool/editeviewer.cpp \
+    components/edittool/core/edit_core.cpp \
+    components/edittool/core/core_fs_check.cpp \
+    components/edittool/core/core_system.cpp \
+    components/edittool/drawer/arrowdrawer.cpp \
+    components/edittool/drawer/drawer.cpp \
+    components/edittool/drawer/erasedrawer.cpp \
+    components/edittool/drawer/imageblurdrawer.cpp \
+    components/edittool/drawer/pendrawer.cpp \
+    components/edittool/drawer/rectangleblurdrawer.cpp \
+    components/edittool/drawer/shapedrawer.cpp \
+    components/edittool/drawer/textdrawer.cpp \
+    components/edittool/tool/arrowtool.cpp \
+    components/edittool/tool/basetool.cpp \
+    components/edittool/tool/erasetool.cpp \
+    components/edittool/tool/pentool.cpp \
+    components/edittool/tool/shapetool.cpp \
+    components/edittool/tool/texttool.cpp \
+    components/edittool/widget/basebutton.cpp \
+    components/edittool/widget/basecombobox.cpp \
+    components/edittool/widget/colorpanel.cpp \
+    components/edittool/widget/colorpicker.cpp \
+    components/edittool/widget/customtextedit.cpp \
+    components/edittool/widget/inputtextedit.cpp \
+    components/edittool/widget/pinwidget.cpp \
+    components/edittool/widget/pixelpanel.cpp \
+    components/edittool/widget/pixelwidget.cpp \
+    components/edittool/widget/separator.cpp \
+    components/edittool/widget/toolwidget.cpp
+
 # gui/viewers
 HEADERS += \
     gui/viewers/documentwidget.h \
@@ -343,6 +410,7 @@ FORMS += \
     gui/overlays/renameoverlay.ui \
     gui/overlays/saveconfirmoverlay.ui \
     gui/overlays/videocontrols.ui \
+    gui/overlays/qcolorpicker.ui \
     gui/panels/croppanel/croppanel.ui \
     gui/panels/sidepanel/sidepanel.ui \
     gui/panels/infobar/infobar.ui \
@@ -361,6 +429,7 @@ HEADERS += \
     utils/stuff.h \
     utils/wallpapersetter.h \
     utils/fileoperations.h \
+    utils/orderedmap.h \
 
 # utils
 SOURCES += \

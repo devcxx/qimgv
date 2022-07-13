@@ -4,19 +4,19 @@
 <context>
     <name>ArrowTool</name>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/arrowtool.cpp" line="34"/>
+        <location filename="../../components/edittool/tool/arrowtool.cpp" line="34"/>
         <source>Pen size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">画笔大小</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/arrowtool.cpp" line="68"/>
+        <location filename="../../components/edittool/tool/arrowtool.cpp" line="68"/>
         <source>Triangle Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">三角箭头</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/arrowtool.cpp" line="69"/>
+        <location filename="../../components/edittool/tool/arrowtool.cpp" line="69"/>
         <source>Line Arrow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">线箭头</translation>
     </message>
 </context>
 <context>
@@ -88,47 +88,47 @@
         <translation>垂直翻转</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="57"/>
+        <location filename="../../gui/contextmenu.cpp" line="64"/>
         <source>Crop</source>
         <translation>裁剪</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="61"/>
+        <location filename="../../gui/contextmenu.cpp" line="68"/>
         <source>Resize</source>
         <translation>调整大小</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="67"/>
+        <location filename="../../gui/contextmenu.cpp" line="73"/>
         <source>Print</source>
         <translation type="unfinished">打印</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="71"/>
+        <location filename="../../gui/contextmenu.cpp" line="77"/>
         <source>Quick copy</source>
         <translation>快速拷贝</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="75"/>
+        <location filename="../../gui/contextmenu.cpp" line="81"/>
         <source>Quick move</source>
         <translation>快速移动</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="79"/>
+        <location filename="../../gui/contextmenu.cpp" line="85"/>
         <source>Move to trash</source>
         <translation>移到回收站</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="83"/>
+        <location filename="../../gui/contextmenu.cpp" line="89"/>
         <source>Open</source>
         <translation>打开</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="87"/>
+        <location filename="../../gui/contextmenu.cpp" line="93"/>
         <source>Folder View</source>
         <translation>文件夹视图</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="101"/>
+        <location filename="../../gui/contextmenu.cpp" line="107"/>
         <source>Image information</source>
         <translation type="unfinished">图片信息</translation>
     </message>
@@ -137,29 +137,34 @@
         <translation type="vanished">设置</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="105"/>
+        <location filename="../../gui/contextmenu.cpp" line="111"/>
         <source>Set as wallpaper</source>
         <translation type="unfinished">设置为壁纸</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="109"/>
+        <location filename="../../gui/contextmenu.cpp" line="115"/>
         <source>Show in folder</source>
         <translation>在文件管理器中显示</translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="117"/>
+        <location filename="../../gui/contextmenu.cpp" line="123"/>
         <source>Back</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.cpp" line="120"/>
+        <location filename="../../gui/contextmenu.cpp" line="126"/>
         <source>Configure menu</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../../gui/contextmenu.ui" line="272"/>
+        <location filename="../../gui/contextmenu.cpp" line="60"/>
         <source>Edit</source>
         <translation type="unfinished">编辑</translation>
+    </message>
+    <message>
+        <location filename="../../gui/contextmenu.ui" line="272"/>
+        <source>Rotate</source>
+        <translation type="unfinished">旋转</translation>
     </message>
 </context>
 <context>
@@ -179,235 +184,241 @@
 <context>
     <name>Core</name>
     <message>
-        <location filename="../../core.cpp" line="255"/>
+        <location filename="../../core.cpp" line="256"/>
         <source>Updated: </source>
         <translation>更新到: </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="261"/>
+        <location filename="../../core.cpp" line="262"/>
         <source>Welcome to </source>
         <translation>欢迎使用 </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="261"/>
+        <location filename="../../core.cpp" line="262"/>
         <source> version </source>
         <translation> 版本 </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="261"/>
+        <location filename="../../core.cpp" line="262"/>
         <source>qlimgv</source>
         <translation type="unfinished">启临图片查看器</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="268"/>
+        <location filename="../../core.cpp" line="269"/>
         <source>Shuffle mode: OFF</source>
         <translation>随机模式: 关闭</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="271"/>
+        <location filename="../../core.cpp" line="272"/>
         <source>Shuffle mode: ON</source>
         <translation>随机模式: 启用</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="280"/>
+        <location filename="../../core.cpp" line="281"/>
         <source>Slideshow: OFF</source>
         <translation>幻灯片播放：关闭</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="284"/>
+        <location filename="../../core.cpp" line="285"/>
         <source>Slideshow: ON</source>
         <translation>幻灯片播放：启用</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="355"/>
+        <location filename="../../core.cpp" line="356"/>
         <source>Delete </source>
         <translation>永久删除 </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="355"/>
+        <location filename="../../core.cpp" line="356"/>
         <source> items permanently?</source>
         <translation> 个项目?</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="357"/>
+        <location filename="../../core.cpp" line="358"/>
         <source>Delete item permanently?</source>
         <translation>是否永久删除它们？</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="358"/>
+        <location filename="../../core.cpp" line="359"/>
         <source>Delete permanently</source>
         <translation>永久删除</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="374"/>
+        <location filename="../../core.cpp" line="375"/>
         <source>File removed</source>
         <translation>文件已删除</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="378"/>
+        <location filename="../../core.cpp" line="379"/>
         <source>Removed: </source>
         <translation>成功删除: </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="378"/>
-        <location filename="../../core.cpp" line="408"/>
+        <location filename="../../core.cpp" line="379"/>
+        <location filename="../../core.cpp" line="409"/>
         <source> files</source>
         <translation> 个文件</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="389"/>
+        <location filename="../../core.cpp" line="390"/>
         <source>Move </source>
         <translation>移动 </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="389"/>
+        <location filename="../../core.cpp" line="390"/>
         <source> items to trash?</source>
         <translation> 个项目到回收站?</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="391"/>
+        <location filename="../../core.cpp" line="392"/>
         <source>Move item to trash?</source>
         <translation>确认删除到回收站?</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="392"/>
+        <location filename="../../core.cpp" line="393"/>
         <source>Move to trash</source>
         <translation>删除到回收站</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="404"/>
+        <location filename="../../core.cpp" line="405"/>
         <source>Moved to trash</source>
         <translation>删除到回收站</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="408"/>
+        <location filename="../../core.cpp" line="409"/>
         <source>Moved to trash: </source>
         <translation>移动到回收站： </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="463"/>
+        <location filename="../../core.cpp" line="464"/>
         <source>File copied</source>
         <translation>文件已拷贝</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="470"/>
+        <location filename="../../core.cpp" line="471"/>
         <source>Path copied</source>
         <translation>目录已拷贝</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="644"/>
-        <location filename="../../core.cpp" line="918"/>
-        <location filename="../../core.cpp" line="939"/>
+        <location filename="../../core.cpp" line="645"/>
+        <location filename="../../core.cpp" line="919"/>
+        <location filename="../../core.cpp" line="940"/>
         <source>File exists</source>
         <translation>文件已经存在</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="644"/>
+        <location filename="../../core.cpp" line="645"/>
         <source>Overwrite file?</source>
         <translation>覆盖文件吗?</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="812"/>
-        <location filename="../../core.cpp" line="880"/>
+        <location filename="../../core.cpp" line="813"/>
+        <location filename="../../core.cpp" line="881"/>
         <source>Could not create directory </source>
         <translation>不能建立该目录 </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="916"/>
+        <location filename="../../core.cpp" line="917"/>
         <source>File moved.</source>
         <translation>文件已移动.</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="918"/>
-        <location filename="../../core.cpp" line="939"/>
+        <location filename="../../core.cpp" line="919"/>
+        <location filename="../../core.cpp" line="940"/>
         <source>Destination file exists. Overwrite?</source>
         <translation>目标文件已经存在. 覆盖吗?</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="937"/>
+        <location filename="../../core.cpp" line="938"/>
         <source>File copied.</source>
         <translation>文件已拷贝.</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="984"/>
+        <location filename="../../core.cpp" line="985"/>
         <source>Perform action &quot;</source>
         <translation>执行操作 \&quot;</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="984"/>
+        <location filename="../../core.cpp" line="985"/>
         <source>Changes will be saved immediately.</source>
         <translation>更改将立即保存.</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1002"/>
+        <location filename="../../core.cpp" line="1003"/>
         <source>Flip horizontal</source>
         <translation>水平翻转</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1006"/>
+        <location filename="../../core.cpp" line="1007"/>
         <source>Flip vertical</source>
         <translation>垂直翻转</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1010"/>
+        <location filename="../../core.cpp" line="1011"/>
         <source>Rotate</source>
         <translation>旋转</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1014"/>
+        <location filename="../../core.cpp" line="1015"/>
         <source>Resize</source>
         <translation>调整大小</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1020"/>
-        <location filename="../../core.cpp" line="1026"/>
+        <location filename="../../core.cpp" line="1021"/>
+        <location filename="../../core.cpp" line="1027"/>
         <source>Crop</source>
         <translation>裁剪</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1058"/>
+        <location filename="../../core.cpp" line="1059"/>
         <source>File saved</source>
         <translation>文件已保存</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1061"/>
+        <location filename="../../core.cpp" line="1062"/>
         <source>Could not save file</source>
         <translation>不能保存文件</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1175"/>
+        <location filename="../../core.cpp" line="1176"/>
         <source>Could not open image</source>
         <translation>不能打开图片</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1179"/>
+        <location filename="../../core.cpp" line="1180"/>
         <source>Can only print static images</source>
         <translation>只能打印静态图片</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1230"/>
+        <location filename="../../core.cpp" line="1242"/>
         <source>Could not open path: </source>
         <translation>不能打开的路径: </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1264"/>
+        <location filename="../../core.cpp" line="1276"/>
         <source>Could not load folder: </source>
         <translation>不能载入的目录: </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1417"/>
+        <location filename="../../core.cpp" line="1431"/>
         <source>End of directory.</source>
         <translation>目录末尾.</translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1456"/>
+        <location filename="../../core.cpp" line="1470"/>
         <source>Load failed: </source>
         <translation>加载失败: </translation>
     </message>
     <message>
-        <location filename="../../core.cpp" line="1500"/>
+        <location filename="../../core.cpp" line="1514"/>
+        <location filename="../../core.cpp" line="1536"/>
         <source>Error: could not load image.</source>
         <translation>错误: 不能载入图片.</translation>
+    </message>
+    <message>
+        <location filename="../../core.cpp" line="1541"/>
+        <source>Can only edit static images</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -491,7 +502,7 @@
 <context>
     <name>EditCore</name>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/core/edit_core.cpp" line="268"/>
+        <location filename="../../components/edittool/core/edit_core.cpp" line="273"/>
         <source>Save File</source>
         <translation type="unfinished">保存文件</translation>
     </message>
@@ -499,19 +510,19 @@
 <context>
     <name>EraseTool</name>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/erasetool.cpp" line="28"/>
+        <location filename="../../components/edittool/tool/erasetool.cpp" line="28"/>
         <source>General erase</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">一般橡皮擦</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/erasetool.cpp" line="29"/>
+        <location filename="../../components/edittool/tool/erasetool.cpp" line="29"/>
         <source>Region erase</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">区域橡皮擦</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/erasetool.cpp" line="35"/>
+        <location filename="../../components/edittool/tool/erasetool.cpp" line="35"/>
         <source>Erase size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">橡皮擦大小</translation>
     </message>
 </context>
 <context>
@@ -783,40 +794,50 @@
     <name>MW</name>
     <message>
         <location filename="../../gui/mainwindow.cpp" line="32"/>
-        <location filename="../../gui/mainwindow.cpp" line="775"/>
+        <location filename="../../gui/mainwindow.cpp" line="783"/>
         <source>qlimgv</source>
         <translation type="unfinished">启临图片查看器</translation>
     </message>
     <message>
-        <location filename="../../gui/mainwindow.cpp" line="536"/>
+        <location filename="../../gui/mainwindow.cpp" line="544"/>
         <source>Save File as...</source>
         <translation>文件另存为...</translation>
     </message>
     <message>
-        <location filename="../../gui/mainwindow.cpp" line="771"/>
+        <location filename="../../gui/mainwindow.cpp" line="554"/>
+        <source>All Files (*)</source>
+        <translation type="unfinished">所有文件 (*)</translation>
+    </message>
+    <message>
+        <location filename="../../gui/mainwindow.cpp" line="557"/>
+        <source>Open image</source>
+        <translation type="unfinished">打开图片</translation>
+    </message>
+    <message>
+        <location filename="../../gui/mainwindow.cpp" line="779"/>
         <source>Folder view</source>
         <translation>文件夹视图</translation>
     </message>
     <message>
-        <location filename="../../gui/mainwindow.cpp" line="772"/>
-        <location filename="../../gui/mainwindow.cpp" line="773"/>
-        <location filename="../../gui/mainwindow.cpp" line="776"/>
-        <location filename="../../gui/mainwindow.cpp" line="777"/>
+        <location filename="../../gui/mainwindow.cpp" line="780"/>
+        <location filename="../../gui/mainwindow.cpp" line="781"/>
+        <location filename="../../gui/mainwindow.cpp" line="784"/>
+        <location filename="../../gui/mainwindow.cpp" line="785"/>
         <source>No file opened.</source>
         <translation>没有文件被打开.</translation>
     </message>
     <message>
-        <location filename="../../gui/mainwindow.cpp" line="838"/>
+        <location filename="../../gui/mainwindow.cpp" line="846"/>
         <source>Fit Window</source>
         <translation>适配窗口</translation>
     </message>
     <message>
-        <location filename="../../gui/mainwindow.cpp" line="842"/>
+        <location filename="../../gui/mainwindow.cpp" line="850"/>
         <source>Fit Width</source>
         <translation>适应宽度</translation>
     </message>
     <message>
-        <location filename="../../gui/mainwindow.cpp" line="846"/>
+        <location filename="../../gui/mainwindow.cpp" line="854"/>
         <source>Fit 1:1</source>
         <translation>适应 1:1</translation>
     </message>
@@ -852,50 +873,50 @@
 <context>
     <name>PenTool</name>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/pentool.cpp" line="23"/>
+        <location filename="../../components/edittool/tool/pentool.cpp" line="23"/>
         <source>Pen size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">画笔大小</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/pentool.cpp" line="57"/>
+        <location filename="../../components/edittool/tool/pentool.cpp" line="57"/>
         <source>Point</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">点</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/pentool.cpp" line="58"/>
+        <location filename="../../components/edittool/tool/pentool.cpp" line="58"/>
         <source>Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">直线</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/pentool.cpp" line="59"/>
+        <location filename="../../components/edittool/tool/pentool.cpp" line="59"/>
         <source>Dash Line</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">虚线</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/pentool.cpp" line="60"/>
+        <location filename="../../components/edittool/tool/pentool.cpp" line="60"/>
         <source>Curve</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">曲线</translation>
     </message>
 </context>
 <context>
     <name>PinWidget</name>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/pinwidget.cpp" line="11"/>
+        <location filename="../../components/edittool/widget/pinwidget.cpp" line="11"/>
         <source>Pin Window</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">贴到屏幕上</translation>
     </message>
 </context>
 <context>
     <name>PixelPanel</name>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/pixelpanel.cpp" line="101"/>
+        <location filename="../../components/edittool/widget/pixelpanel.cpp" line="101"/>
         <source>[C] copy color value</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[C] 复制颜色值</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/pixelpanel.cpp" line="102"/>
+        <location filename="../../components/edittool/widget/pixelpanel.cpp" line="102"/>
         <source>[Shift+A] RGB/HEX</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[Shift+A] RGB/HEX</translation>
     </message>
 </context>
 <context>
@@ -1035,6 +1056,14 @@ Press ESC to cancel</source>
     <message>
         <source>&amp;Pick Screen Color</source>
         <translation type="vanished">选取屏幕颜色(&amp;P)</translation>
+    </message>
+</context>
+<context>
+    <name>QColorPicker</name>
+    <message>
+        <location filename="../../gui/overlays/qcolorpicker.ui" line="35"/>
+        <source>QColorPicker</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1186,6 +1215,16 @@ Press ESC to cancel</source>
         <location filename="../../sourcecontainers/image.cpp" line="65"/>
         <source>Width</source>
         <translation type="unfinished">宽度</translation>
+    </message>
+    <message>
+        <location filename="../../sourcecontainers/image.cpp" line="65"/>
+        <location filename="../../sourcecontainers/image.cpp" line="66"/>
+        <source>pixels</source>
+        <translation type="unfinished">像素</translation>
+    </message>
+    <message>
+        <source>Pixels</source>
+        <translation type="obsolete">像素</translation>
     </message>
     <message>
         <location filename="../../sourcecontainers/image.cpp" line="66"/>
@@ -1516,7 +1555,7 @@ Press ESC to cancel</source>
     <message>
         <location filename="../../gui/dialogs/scripteditordialog.cpp" line="10"/>
         <source>New application/script</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">新 应用/脚本</translation>
     </message>
     <message>
         <location filename="../../gui/dialogs/scripteditordialog.cpp" line="22"/>
@@ -1543,6 +1582,14 @@ Press ESC to cancel</source>
         <location filename="../../gui/dialogs/scripteditordialog.cpp" line="80"/>
         <source>Select a script file</source>
         <translation>选择一个脚本文件</translation>
+    </message>
+</context>
+<context>
+    <name>Settings</name>
+    <message>
+        <location filename="../../settings.cpp" line="268"/>
+        <source>Supported files (</source>
+        <translation type="unfinished">支持文件 (</translation>
     </message>
 </context>
 <context>
@@ -2474,34 +2521,34 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>ShapeTool</name>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="42"/>
+        <location filename="../../components/edittool/tool/shapetool.cpp" line="42"/>
         <source>Border</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">边框</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="43"/>
+        <location filename="../../components/edittool/tool/shapetool.cpp" line="43"/>
         <source>Fill</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">填充</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="44"/>
+        <location filename="../../components/edittool/tool/shapetool.cpp" line="44"/>
         <source>Rectangle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">矩形</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="45"/>
+        <location filename="../../components/edittool/tool/shapetool.cpp" line="45"/>
         <source>Circle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">圆形</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="46"/>
+        <location filename="../../components/edittool/tool/shapetool.cpp" line="46"/>
         <source>Triangle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">三角形</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/shapetool.cpp" line="47"/>
+        <location filename="../../components/edittool/tool/shapetool.cpp" line="47"/>
         <source>Vertical triangle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">直角三角形</translation>
     </message>
 </context>
 <context>
@@ -2535,139 +2582,139 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>TextTool</name>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="32"/>
+        <location filename="../../components/edittool/tool/texttool.cpp" line="32"/>
         <source>Font families</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">所有字体</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="33"/>
+        <location filename="../../components/edittool/tool/texttool.cpp" line="33"/>
         <source>Font size</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">字体大小</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="47"/>
+        <location filename="../../components/edittool/tool/texttool.cpp" line="47"/>
         <source>Bold</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">粗体</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="48"/>
+        <location filename="../../components/edittool/tool/texttool.cpp" line="48"/>
         <source>Underline</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">下划线</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="49"/>
+        <location filename="../../components/edittool/tool/texttool.cpp" line="49"/>
         <source>Italic</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">斜体</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/tool/texttool.cpp" line="50"/>
+        <location filename="../../components/edittool/tool/texttool.cpp" line="50"/>
         <source>StrikeOut</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">删除线</translation>
     </message>
 </context>
 <context>
     <name>ToolWidget</name>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="44"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="44"/>
         <source>shape tool</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">图形</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="45"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="45"/>
         <source>pen tool</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">画笔</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="46"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="46"/>
         <source>text tool</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">文本</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="47"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="47"/>
         <source>arrow tool</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">箭头</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="48"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="48"/>
         <source>blur</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">马赛克</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="49"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="49"/>
         <source>Brush tool</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">画刷</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="50"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="50"/>
         <source>erase tool</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">橡皮擦</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="51"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="51"/>
         <source>undo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">撤销</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="52"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="52"/>
         <source>redo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">重做</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="53"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="53"/>
         <source>close</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">关闭</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="54"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="54"/>
         <source>pin tool</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">贴图</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="55"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="55"/>
         <source>save to file</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">保存到文件</translation>
     </message>
     <message>
-        <location filename="../../gui/panels/edittoolpanel/edittool/widget/toolwidget.cpp" line="56"/>
+        <location filename="../../components/edittool/widget/toolwidget.cpp" line="56"/>
         <source>copy to clipboard</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">复制到剪贴板</translation>
     </message>
 </context>
 <context>
     <name>main</name>
     <message>
-        <location filename="../../main.cpp" line="68"/>
-        <location filename="../../main.cpp" line="107"/>
+        <location filename="../../main.cpp" line="69"/>
+        <location filename="../../main.cpp" line="108"/>
         <source>qlimgv</source>
         <translation type="unfinished">启临图片查看器</translation>
     </message>
     <message>
-        <location filename="../../main.cpp" line="113"/>
+        <location filename="../../main.cpp" line="114"/>
         <source>File or directory path.</source>
         <translation>文件或目录所在路径.</translation>
     </message>
     <message>
-        <location filename="../../main.cpp" line="117"/>
+        <location filename="../../main.cpp" line="118"/>
         <source>Generate all thumbnails for directory.</source>
         <translation>为该目录下的所有文件生成略缩图.</translation>
     </message>
     <message>
-        <location filename="../../main.cpp" line="118"/>
+        <location filename="../../main.cpp" line="119"/>
         <source>directory-path</source>
         <translation>目录所在路径</translation>
     </message>
     <message>
-        <location filename="../../main.cpp" line="121"/>
+        <location filename="../../main.cpp" line="122"/>
         <source>Thumbnail size. Current size is used if not specified.</source>
         <translation>缩略图大小. 如果未指定, 则使用当前大小.</translation>
     </message>
     <message>
-        <location filename="../../main.cpp" line="122"/>
+        <location filename="../../main.cpp" line="123"/>
         <source>thumbnail-size</source>
         <translation>略缩图大小</translation>
     </message>
     <message>
-        <location filename="../../main.cpp" line="125"/>
+        <location filename="../../main.cpp" line="126"/>
         <source>Show build options.</source>
         <translation>显示编译选项.</translation>
     </message>

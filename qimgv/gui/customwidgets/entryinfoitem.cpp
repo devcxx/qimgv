@@ -7,8 +7,8 @@ EntryInfoItem::EntryInfoItem(QWidget *parent) : QWidget(parent) {
     layout.addWidget(&valueLabel);
     setLayout(&layout);
 
-    nameLabel.setFixedSize(120,30);
-    valueLabel.setFixedSize(142,30);
+    nameLabel.setFixedSize(70,30);
+    valueLabel.setFixedSize(190,30);
 
     // add some padding for easier text selection
     valueLabel.setContentsMargins(3,0,0,0);

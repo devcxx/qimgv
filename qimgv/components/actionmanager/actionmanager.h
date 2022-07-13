@@ -123,6 +123,7 @@ signals:
     void print();
     void toggleFullscreenInfoBar();
     void pasteFile();
+    void edit();
 };
 
 extern ActionManager *actionManager;

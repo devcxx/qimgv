@@ -7,10 +7,12 @@
 #include "gui/overlays/videocontrolsproxy.h"
 #include "gui/overlays/zoomindicatoroverlayproxy.h"
 #include "gui/contextmenu.h"
+#include "components/edittool/editeviewer.h"
 
 enum CurrentWidget {
     IMAGEVIEWER,
     VIDEOPLAYER,
+    EDITVIEWER,
     UNSET
 };
 
@@ -27,16 +29,19 @@ public:
     bool interactionEnabled();
 
     bool showImage(std::unique_ptr<QPixmap> pixmap);
+    bool editImage(std::unique_ptr<QPixmap> pixmap, const QString& filePath);
     bool showAnimation(std::shared_ptr<QMovie> movie);
     void onScalingFinished(std::unique_ptr<QPixmap> scaled);
     bool isDisplaying();
     bool lockZoomEnabled();
     bool lockViewEnabled();
     ScalingFilter scalingFilter();
+    CurrentWidget currentView();
 
 private:
     QVBoxLayout layout;
     std::unique_ptr<ImageViewerV2> imageViewer;
+    std::unique_ptr<EditViewer> editViewer;
     std::unique_ptr<VideoPlayerInitProxy> videoPlayer;
     std::unique_ptr<ContextMenu> contextMenu;
     VideoControlsProxyWrapper *videoControls;
@@ -44,6 +49,7 @@ private:
 
     void enableImageViewer();
     void enableVideoPlayer();
+    void enableEditViewer();
 
     CurrentWidget currentWidget;
     bool mInteractionEnabled, mWaylandCursorWorkaround;
@@ -53,6 +59,7 @@ private:
 
     void disableImageViewer();
     void disableVideoPlayer();
+    void disableEditViewer();
 
     QRect videoControlsArea();
 
@@ -60,6 +67,7 @@ private slots:
     void onScaleChanged(qreal);
     void onVideoPlaybackFinished();
     void onAnimationPlaybackFinished();
+    void onEditDone();
 
 signals:
     void scalingRequested(QSize, ScalingFilter);

@@ -87,6 +87,7 @@ void Actions::init() {
     mActions.insert("seekVideoBackward", QVersionNumber(0,9,2));
     mActions.insert("lockZoom", QVersionNumber(0,9,2));
     mActions.insert("lockView", QVersionNumber(0,9,2));
+    mActions.insert("edit", QVersionNumber(0,6,2));
     mActions.insert("print", QVersionNumber(1,0,0));
     mActions.insert("toggleFullscreenInfoBar", QVersionNumber(1,0,0));
     mActions.insert("pasteFile", QVersionNumber(1,0,3));

@@ -62,8 +62,8 @@ OrderedMap<QString, QString> Image::getAllTags()
     tags.insert(QObject::tr("Type"), mDocInfo->mimeType().name());
     tags.insert(QObject::tr("Size"), QLocale().formattedDataSize(fileSize(), 1));
     tags.insert(QObject::tr("Modified date"), lastModified().toString("yyyy-MM-dd hh:mm"));
-    tags.insert(QObject::tr("Width"), QString::number(width()));
-    tags.insert(QObject::tr("Height"), QString::number(height()));
+    tags.insert(QObject::tr("Width"), QString("%1 %2").arg(width()).arg(QObject::tr("pixels")));
+    tags.insert(QObject::tr("Height"), QString("%1 %2").arg(height()).arg(QObject::tr("pixels")));
     return tags;
 }
 

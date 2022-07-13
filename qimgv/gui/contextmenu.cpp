@@ -53,16 +53,22 @@ ContextMenu::ContextMenu(QWidget *parent) :
     ui->flipV->setToolTip(tr("Flip V"));
     ui->flipV->setIconPath(":/res/icons/common/menuitem/flip-v16.png");
     ui->flipV->setTriggerMode(TriggerMode::PressTrigger);
-    ui->crop->setAction("crop");
-    ui->crop->setToolTip(tr("Crop"));
-    ui->crop->setIconPath(":/res/icons/common/menuitem/image-crop16.png");
-    ui->crop->setTriggerMode(TriggerMode::PressTrigger);
-    ui->resize->setAction("resize");
-    ui->resize->setToolTip(tr("Resize"));
-    ui->resize->setIconPath(":/res/icons/common/menuitem/resize16.png");
-    ui->resize->setTriggerMode(TriggerMode::PressTrigger);
+
     // -------------------------------------------------------------------------
     //  entries
+    ui->edit->setAction("edit");
+    ui->edit->setText(tr("Edit"));
+    ui->edit->setIconPath(":/res/icons/common/menuitem/edit16.png");
+
+        ui->crop->setAction("crop");
+        ui->crop->setText(tr("Crop"));
+        ui->crop->setIconPath(":/res/icons/common/menuitem/image-crop16.png");
+//        ui->crop->setTriggerMode(TriggerMode::PressTrigger);
+        ui->resize->setAction("resize");
+        ui->resize->setText(tr("Resize"));
+        ui->resize->setIconPath(":/res/icons/common/menuitem/resize16.png");
+//        ui->resize->setTriggerMode(TriggerMode::PressTrigger);
+
     ui->print->setAction("print");
     ui->print->setText(tr("Print"));
     ui->print->setIconPath(":/res/icons/common/menuitem/print16.png");

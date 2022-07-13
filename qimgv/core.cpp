@@ -202,6 +202,7 @@ void Core::initActions() {
     connect(actionManager, &ActionManager::print, this, &Core::print);
     connect(actionManager, &ActionManager::toggleFullscreenInfoBar, this, &Core::toggleFullscreenInfoBar);
     connect(actionManager, &ActionManager::pasteFile, this, &Core::openFromClipboard);
+    connect(actionManager, &ActionManager::edit, this, &Core::edit);
 }
 #define TRANSLATIONS_PATH ":/res/translations/"
 void Core::loadTranslation() {
@@ -1185,6 +1186,17 @@ void Core::print() {
     p.exec();
 }
 
+void Core::edit() {
+    if(model->isEmpty() || selectedPath().isEmpty())
+        return;
+    auto img = model->getImage(selectedPath());
+    if(img->type() != DocumentType::STATIC) {
+        mw->showMessage("Can only edit static images");
+        return;
+    }
+    mw->editImage(img->getPixmap());
+}
+
 void Core::scalingRequest(QSize size, ScalingFilter filter) {
     // filter out an unnecessary scale request at statup
     if(mw->isVisible() && state.hasActiveImage) {
@@ -1354,7 +1366,8 @@ void Core::prevDirectory() {
 }
 
 void Core::nextImage() {
-    if(mw->currentViewMode() == MODE_FOLDERVIEW || (model->isEmpty() && folderEndAction != FOLDER_END_GOTO_ADJACENT))
+    if(mw->currentViewMode() == MODE_FOLDERVIEW || (model->isEmpty() && folderEndAction != FOLDER_END_GOTO_ADJACENT)
+            || mw->currentDocView() == EDITVIEWER)
         return;
     stopSlideshow();
     if(shuffle) {
@@ -1378,7 +1391,8 @@ void Core::nextImage() {
 }
 
 void Core::prevImage() {
-    if(mw->currentViewMode() == MODE_FOLDERVIEW || (model->isEmpty() && folderEndAction != FOLDER_END_GOTO_ADJACENT))
+    if(mw->currentViewMode() == MODE_FOLDERVIEW || (model->isEmpty() && folderEndAction != FOLDER_END_GOTO_ADJACENT)
+            || mw->currentDocView() == EDITVIEWER)
         return;
     stopSlideshow();
     if(shuffle) {
@@ -1515,6 +1529,19 @@ void Core::guiSetImage(std::shared_ptr<Image> img) {
     }
     img->isEdited() ? mw->showSaveOverlay() : mw->hideSaveOverlay();
     mw->setExifInfo(img->getAllTags());
+}
+
+void Core::guiEditImage(std::shared_ptr<Image> img) {
+    if(!img) {
+        mw->showMessage(tr("Error: could not load image."));
+        return;
+    }
+    DocumentType type = img->type();
+    if(type == ANIMATED || type == VIDEO) {
+        mw->showError(tr("Can only edit static images"));
+        return;
+    }
+    mw->editImage(img->getPixmap());
 }
 
 void Core::updateInfoString() {

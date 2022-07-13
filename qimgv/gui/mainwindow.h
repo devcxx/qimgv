@@ -68,6 +68,7 @@ public:
     bool isCropPanelActive();
     void onScalingFinished(std::unique_ptr<QPixmap>scaled);
     void showImage(std::unique_ptr<QPixmap> pixmap);
+    void editImage(std::unique_ptr<QPixmap> pixmap);
     void showAnimation(std::shared_ptr<QMovie> movie);
     void showVideo(QString file);
 
@@ -77,6 +78,7 @@ public:
     std::shared_ptr<ThumbnailStripProxy> getThumbnailPanel();
 
     ViewMode currentViewMode();
+    CurrentWidget currentDocView();
 
     bool showConfirmation(QString title, QString msg);
     DialogResult fileReplaceDialog(QString source, QString target, FileReplaceMode mode, bool multiple);

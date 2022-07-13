@@ -82,6 +82,7 @@ private:
     void attachModel(DirectoryModel *_model);
     QString selectedPath();
     void guiSetImage(std::shared_ptr<Image> img);
+    void guiEditImage(std::shared_ptr<Image> img);
     QTimer slideshowTimer;
 
     void startSlideshowTimer();
@@ -175,5 +176,6 @@ private slots:
     void prevDirectory(bool selectLast);
     void prevDirectory();
     void print();
+    void edit();
     void modelDelayLoad();
 };

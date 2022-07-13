@@ -265,7 +265,7 @@ QList<QByteArray> Settings::supportedFormats() {
 QString Settings::supportedFormatsFilter() {
     QString filters;
     auto formats = supportedFormats();
-    filters.append("Supported files (");
+    filters.append(tr("Supported files ("));
     for(int i = 0; i < formats.count(); i++)
         filters.append("*." + QString(formats.at(i)) + " ");
     filters.append(")");
@@ -424,9 +424,9 @@ const QMultiMap<QByteArray, QByteArray> Settings::videoFormats() const {
 //------------------------------------------------------------------------------
 int Settings::panelPreviewsSize() {
     bool ok = true;
-    int size = settings->settingsConf->value("panelPreviewsSize", 140).toInt(&ok);
+    int size = settings->settingsConf->value("panelPreviewsSize", 120).toInt(&ok);
     if(!ok)
-        size = 140;
+        size = 120;
     size = qBound(100, size, 250);
     return size;
 }
@@ -998,7 +998,7 @@ void Settings::setPrintPdfDefault(bool mode) {
 }
 //------------------------------------------------------------------------------
 bool Settings::printColor() {
-    return stateConf->value("printColor", false).toBool();
+    return stateConf->value("printColor", true).toBool();
 }
 
 void Settings::setPrintColor(bool mode) {

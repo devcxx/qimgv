@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/svg"/>
+    <qresource prefix="/png">
+        <file>res/images/icon_1graph@2x.png</file>
+        <file>res/images/icon_2text@2x.png</file>
+        <file>res/images/icon_3arrow@2x.png</file>
+        <file>res/images/icon_4paint@2x.png</file>
+        <file>res/images/icon_5brush@2x.png</file>
+        <file>res/images/icon_6eraser@2x.png</file>
+        <file>res/images/icon_7revocation@2x.png</file>
+        <file>res/images/icon_8redo@2x.png</file>
+        <file>res/images/icon_9pig@2x.png</file>
+        <file>res/images/icon_10close@2x.png</file>
+        <file>res/images/icon_11save@2x.png</file>
+        <file>res/images/icon_12paste@2x.png</file>
+        <file>res/images/arrow@2x.png</file>
+        <file>res/images/bold@2x.png</file>
+        <file>res/images/border-rect@2x.png</file>
+        <file>res/images/circle@2x.png</file>
+        <file>res/images/curve@2x.png</file>
+        <file>res/images/dashline@2x.png</file>
+        <file>res/images/dots@2x.png</file>
+        <file>res/images/filled-rect@2x.png</file>
+        <file>res/images/italic@2x.png</file>
+        <file>res/images/line@2x.png</file>
+        <file>res/images/pen@2x.png</file>
+        <file>res/images/rectangular@2x.png</file>
+        <file>res/images/rtriangle@2x.png</file>
+        <file>res/images/strikeout@2x.png</file>
+        <file>res/images/triangle@2x.png</file>
+        <file>res/images/tri-arrow@2x.png</file>
+        <file>res/images/underline@2x.png</file>
+        <file>res/images/erase-rectangular0@2x.png</file>
+        <file>res/images/erase-rectangular@2x.png</file>
+    </qresource>
+</RCC>

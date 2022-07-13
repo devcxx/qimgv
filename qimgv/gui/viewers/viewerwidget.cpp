@@ -9,6 +9,7 @@ ViewerWidget::ViewerWidget(QWidget *parent)
     : FloatingWidgetContainer(parent),
       imageViewer(nullptr),
       videoPlayer(nullptr),
+      editViewer(nullptr),
       contextMenu(nullptr),
       videoControls(nullptr),
       currentWidget(UNSET),
@@ -44,6 +45,11 @@ ViewerWidget::ViewerWidget(QWidget *parent)
     layout.addWidget(videoPlayer.get());
     videoPlayer->hide();
     videoControls = new VideoControlsProxyWrapper(this);
+
+    editViewer.reset(new EditViewer(this));
+    layout.addWidget(editViewer.get());
+    editViewer->hide();
+    connect(editViewer.get(), &EditViewer::editDone, this, &ViewerWidget::onEditDone);
 
     // tmp no wrapper
     zoomIndicator = new ZoomIndicatorOverlayProxy(this);
@@ -88,6 +94,7 @@ QSize ViewerWidget::sourceSize() {
 void ViewerWidget::enableImageViewer() {
     if(currentWidget != IMAGEVIEWER) {
         disableVideoPlayer();
+         disableEditViewer();
         videoControls->setMode(PLAYBACK_ANIMATION);
         connect(imageViewer.get(), &ImageViewerV2::durationChanged, videoControls, &VideoControlsProxyWrapper::setPlaybackDuration);
         connect(imageViewer.get(), &ImageViewerV2::frameChanged,    videoControls, &VideoControlsProxyWrapper::setPlaybackPosition);
@@ -101,12 +108,24 @@ void ViewerWidget::enableImageViewer() {
 void ViewerWidget::enableVideoPlayer() {
     if(currentWidget != VIDEOPLAYER) {
         disableImageViewer();
+        disableEditViewer();
         videoControls->setMode(PLAYBACK_VIDEO);
         connect(videoPlayer.get(), &VideoPlayer::durationChanged, videoControls, &VideoControlsProxyWrapper::setPlaybackDuration);
         connect(videoPlayer.get(), &VideoPlayer::positionChanged, videoControls, &VideoControlsProxyWrapper::setPlaybackPosition);
         connect(videoPlayer.get(), &VideoPlayer::videoPaused,     videoControls, &VideoControlsProxyWrapper::onPlaybackPaused);
         videoPlayer->show();
         currentWidget = VIDEOPLAYER;
+    }
+}
+
+void ViewerWidget::enableEditViewer() {
+    if (currentWidget != EDITVIEWER) {
+        disableImageViewer();
+        disableVideoPlayer();
+        zoomIndicator->hide();
+        setInteractionEnabled(false);
+        editViewer->show();
+        currentWidget = EDITVIEWER;
     }
 }
 
@@ -139,6 +158,14 @@ void ViewerWidget::disableVideoPlayer() {
     }
 }
 
+void ViewerWidget::disableEditViewer() {
+    if (currentWidget == EDITVIEWER) {
+        currentWidget = UNSET;
+         setInteractionEnabled(true);
+        editViewer->hide();
+    }
+}
+
 void ViewerWidget::onScaleChanged(qreal scale) {
     if(!this->isVisible())
         return;
@@ -161,6 +188,10 @@ void ViewerWidget::onVideoPlaybackFinished() {
 void ViewerWidget::onAnimationPlaybackFinished() {
     if(currentWidget == IMAGEVIEWER)
         emit playbackFinished();
+}
+
+void ViewerWidget::onEditDone() {
+    enableImageViewer();
 }
 
 void ViewerWidget::setInteractionEnabled(bool mode) {
@@ -211,6 +242,19 @@ bool ViewerWidget::showImage(std::unique_ptr<QPixmap> pixmap) {
     stopPlayback();
     videoControls->hide();
     enableImageViewer();
+    imageViewer->showImage(std::move(pixmap));
+    hideCursorTimed(false);
+    return true;
+}
+
+bool ViewerWidget::editImage(std::unique_ptr<QPixmap> pixmap, const QString& filePath) {
+    if(!pixmap)
+        return false;
+    stopPlayback();
+    videoControls->hide();
+    enableEditViewer();
+    editViewer->setImage(pixmap->toImage());
+    editViewer->setImagePath(filePath);
     imageViewer->showImage(std::move(pixmap));
     hideCursorTimed(false);
     return true;
@@ -365,6 +409,10 @@ ScalingFilter ViewerWidget::scalingFilter() {
     return imageViewer->scalingFilter();
 }
 
+CurrentWidget ViewerWidget::currentView() {
+    return currentWidget;
+}
+
 void ViewerWidget::mousePressEvent(QMouseEvent *event) {
     hideContextMenu();
     event->ignore();
@@ -383,10 +431,11 @@ void ViewerWidget::mouseMoveEvent(QMouseEvent *event) {
         hideCursorTimed(true);
     }
     if(currentWidget == VIDEOPLAYER || imageViewer->hasAnimation()) {
-        if(videoControlsArea().contains(event->pos()))
+        if(videoControlsArea().contains(event->pos())) {
             videoControls->show();
-        else
+        } else {
             videoControls->hide();
+        }
     }
     event->ignore();
 }
