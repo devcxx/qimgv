@@ -201,7 +201,7 @@
     <message>
         <location filename="../../core.cpp" line="262"/>
         <source>qlimgv</source>
-        <translation type="unfinished">启临图片查看器</translation>
+        <translation type="unfinished">启星图片查看器</translation>
     </message>
     <message>
         <location filename="../../core.cpp" line="269"/>
@@ -796,7 +796,7 @@
         <location filename="../../gui/mainwindow.cpp" line="32"/>
         <location filename="../../gui/mainwindow.cpp" line="783"/>
         <source>qlimgv</source>
-        <translation type="unfinished">启临图片查看器</translation>
+        <translation type="unfinished">启星图片查看器</translation>
     </message>
     <message>
         <location filename="../../gui/mainwindow.cpp" line="544"/>
@@ -2475,7 +2475,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <location filename="../../gui/dialogs/settingsdialog.cpp" line="9"/>
         <source>qlimgv</source>
-        <translation type="unfinished">启临图片查看器</translation>
+        <translation type="unfinished">启星图片查看器</translation>
     </message>
     <message>
         <location filename="../../gui/dialogs/settingsdialog.cpp" line="54"/>
@@ -2686,7 +2686,7 @@ p, li { white-space: pre-wrap; }
         <location filename="../../main.cpp" line="69"/>
         <location filename="../../main.cpp" line="108"/>
         <source>qlimgv</source>
-        <translation type="unfinished">启临图片查看器</translation>
+        <translation type="unfinished">启星图片查看器</translation>
     </message>
     <message>
         <location filename="../../main.cpp" line="114"/>

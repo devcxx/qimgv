@@ -110,6 +110,9 @@ ContextMenu::ContextMenu(QWidget *parent) :
     ui->setWallpaper->setAction("setWallpaper");
     ui->setWallpaper->setText(tr("Set as wallpaper"));
     ui->setWallpaper->setIconPath(":/res/icons/common/menuitem/document-view16.png");
+#ifndef Q_OS_WIN
+    ui->setWallpaper->setVisible(false);
+#endif
     // -------------------------------------------------------------------------
     ui->showLocation->setAction("showInDirectory");
     ui->showLocation->setText(tr("Show in folder"));
