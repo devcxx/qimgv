@@ -149,17 +149,17 @@
     <message>
         <location filename="../../gui/contextmenu.cpp" line="123"/>
         <source>Back</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">后退</translation>
     </message>
     <message>
         <location filename="../../gui/contextmenu.cpp" line="126"/>
         <source>Configure menu</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">配置菜单</translation>
     </message>
     <message>
         <location filename="../../gui/contextmenu.cpp" line="60"/>
         <source>Edit</source>
-        <translation type="unfinished">编辑</translation>
+        <translation>编辑</translation>
     </message>
     <message>
         <location filename="../../gui/contextmenu.ui" line="272"/>
@@ -418,7 +418,7 @@
     <message>
         <location filename="../../core.cpp" line="1541"/>
         <source>Can only edit static images</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">只能编辑静态图片</translation>
     </message>
 </context>
 <context>

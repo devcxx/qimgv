@@ -1191,7 +1191,7 @@ void Core::edit() {
         return;
     auto img = model->getImage(selectedPath());
     if(img->type() != DocumentType::STATIC) {
-        mw->showMessage("Can only edit static images");
+        mw->showMessage(tr("Can only edit static images"));
         return;
     }
     mw->editImage(img->getPixmap());
