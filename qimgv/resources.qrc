@@ -162,5 +162,6 @@
         <file>res/icons/common/buttons/panel/pin-panel20@2x.png</file>
         <file>res/translations/zh_CN.qm</file>
         <file>res/icons/common/menuitem/edit16.png</file>
+        <file>res/translations/qt_zh_CN.qm</file>
     </qresource>
 </RCC>

@@ -41,6 +41,7 @@ RC_FILE = qimgv.rc
 
 TRANSLATIONS += \
     res/translations/zh_CN.ts \
+    res/translations/qt_zh_CN.ts \
 
 win32 {
     LIBS += User32.lib

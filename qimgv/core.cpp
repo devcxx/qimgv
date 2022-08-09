@@ -230,6 +230,14 @@ void Core::loadTranslation() {
             return;
         }
     }
+
+    if (localeName == "zh_CN") {
+        QTranslator* qtTr = new QTranslator;
+        if (qtTr->load(":/res/translations/qt_zh_CN")) {
+            QCoreApplication::installTranslator(qtTr);
+        }
+    }
+
     QApplication::installTranslator(translator);
 }
 
